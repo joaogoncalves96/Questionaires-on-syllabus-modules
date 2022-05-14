@@ -2,10 +2,10 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/css": "pages/css.js",
-  "/javascript": "pages/javascript.js",
-  "/html": "pages/html.js",
-  "/react": "pages/react.js",
   "/": "pages/index.js",
-  "/login": "pages/login.js"
+  "/css": "pages/css.js",
+  "/react": "pages/react.js",
+  "/login": "pages/login.js",
+  "/html": "pages/html.js",
+  "/javascript": "pages/javascript.js"
 }
