@@ -1,3 +1,4 @@
+
 import Head from 'next/head';
 
 export default function Home() {
@@ -10,4 +11,12 @@ export default function Home() {
   
   );
 }
+
+=======
+function HelloWorld() {
+
+  return <div>Hello World!!!! sekjvnbisdbninsikd </div>;
+}
+
+export default HelloWorld;
 
