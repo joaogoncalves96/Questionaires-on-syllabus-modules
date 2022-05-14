@@ -1,0 +1,130 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "username": "John"
+        }
+    ],
+    "results": [
+      {
+        "category": "Sports",
+        "type": "multiple",
+        "difficulty": "hard",
+        "question": "How many times did Martina Navratilova win the Wimbledon Singles Championship?",
+        "correct_answer": "Nine",
+        "incorrect_answers": [
+          "Ten",
+          "Seven",
+          "Eight"
+        ]
+      },
+      {
+        "category": "Sports",
+        "type": "multiple",
+        "difficulty": "hard",
+        "question": "What tool lends it&#039;s name to a last-stone advantage in an end in Curling?",
+        "correct_answer": "Hammer",
+        "incorrect_answers": [
+          "Wrench",
+          "Drill",
+          "Screwdriver"
+        ]
+      },
+      {
+        "category": "Sports",
+        "type": "multiple",
+        "difficulty": "medium",
+        "question": "A stimpmeter measures the speed of a ball over what surface?",
+        "correct_answer": "Golf Putting Green",
+        "incorrect_answers": [
+          " Football Pitch",
+          "Cricket Outfield",
+          "Pinball Table"
+        ]
+      },
+      {
+        "category": "Sports",
+        "type": "multiple",
+        "difficulty": "medium",
+        "question": "What national team won the 2016 edition of UEFA European Championship?",
+        "correct_answer": "Portugal",
+        "incorrect_answers": [
+          "France",
+          "Germany",
+          "England"
+        ]
+      },
+      {
+        "category": "Sports",
+        "type": "multiple",
+        "difficulty": "easy",
+        "question": "In Baseball, how many times does the ball have to be pitched outside of the strike zone before the batter is walked?",
+        "correct_answer": "4",
+        "incorrect_answers": [
+          "1",
+          "2",
+          "3"
+        ]
+      },
+      {
+        "category": "Sports",
+        "type": "multiple",
+        "difficulty": "medium",
+        "question": "What is the oldest team in the NFL?",
+        "correct_answer": "Arizona Cardinals",
+        "incorrect_answers": [
+          "Chicago Bears",
+          "Green Bay Packers",
+          "New York Giants"
+        ]
+      },
+      {
+        "category": "Sports",
+        "type": "multiple",
+        "difficulty": "medium",
+        "question": "Why was The Green Monster at Fenway Park was originally built?",
+        "correct_answer": "To prevent viewing games from outside the park.",
+        "incorrect_answers": [
+          "To make getting home runs harder.",
+          "To display advertisements.",
+          "To provide extra seating."
+        ]
+      },
+      {
+        "category": "Sports",
+        "type": "multiple",
+        "difficulty": "easy",
+        "question": "When was the FC Schalke 04 founded?",
+        "correct_answer": "1904",
+        "incorrect_answers": [
+          "1909",
+          "2008",
+          "1999"
+        ]
+      },
+      {
+        "category": "Sports",
+        "type": "multiple",
+        "difficulty": "medium",
+        "question": "Who won the 2018 Monaco Grand Prix?",
+        "correct_answer": "Daniel Ricciardo",
+        "incorrect_answers": [
+          "Sebastian Vettel",
+          "Kimi Raikkonen",
+          "Lewis Hamilton"
+        ]
+      },
+      {
+        "category": "Sports",
+        "type": "multiple",
+        "difficulty": "hard",
+        "question": "In Canadian football, scoring a rouge is worth how many points?",
+        "correct_answer": "1",
+        "incorrect_answers": [
+          "2",
+          "3",
+          "4"
+        ]
+      }
+    ]
+  }
