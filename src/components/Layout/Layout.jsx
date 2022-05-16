@@ -4,16 +4,16 @@ import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 
 const Layout = ({ children }) => {
-  return (
-    <>
-      <Nav />
-      <div className={styles.container}>
-        <main className={styles.main}>{children}</main>
-        <Header />
-        <Footer />
-      </div>
-    </>
-  );
+   return (
+      <>
+         <Nav />
+         <Header />
+         <div className={styles.container}>
+            <main className={styles.main}>{children}</main>
+            <Footer />
+         </div>
+      </>
+   );
 };
 
 export default Layout;

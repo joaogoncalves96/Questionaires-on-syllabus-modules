@@ -1,15 +1,19 @@
-import Head from 'next/head';
-import Question from '../components/Question/Question';
+import Head from "next/head";
+import SingleChoiceQuestion from "../components/SingleChoiceQuestion/SingleChoiceQuestion";
+import MultiChoiceQuestion from "../components/MultiChoiceQuestion/MultiChoiceQuestion";
 
-function javaScript() {
-    return (
-        <div>
-            <Head>
+function JavaScript() {
+   // const { category } = props;
+
+   return (
+      <div>
+         <Head>
             <title>Javascript</title>
-            </Head>
-            <h1>JavaScript</h1>
-            <Question />
-        </div>
-    );
+         </Head>
+         {/* <h1>JavaScript</h1> */}
+         {/* <SingleChoiceQuestion /> */}
+         <MultiChoiceQuestion />
+      </div>
+   );
 }
-export default javaScript;
+export default JavaScript;
