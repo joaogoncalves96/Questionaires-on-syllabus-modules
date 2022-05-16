@@ -1,6 +1,6 @@
 import Head from 'next/head';
 
-function css() {
+function Css() {
     return (
         <div>
             <Head>
@@ -10,4 +10,4 @@ function css() {
         </div>
     );
 }
-export default css;
+export default Css;
