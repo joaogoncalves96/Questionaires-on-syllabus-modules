@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Question from '../components/Question/Question';
 
-function javaScript() {
+function JavaScript() {
     return (
         <div>
             <Head>
@@ -12,4 +12,4 @@ function javaScript() {
         </div>
     );
 }
-export default javaScript;
+export default JavaScript;

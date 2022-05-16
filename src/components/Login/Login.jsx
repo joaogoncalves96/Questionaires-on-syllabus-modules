@@ -1,18 +1,19 @@
 import styles from "./Login.module.css";
 import { useState } from "react";
-import databaseUsers from "../../../databaseUsers.json";
+import database from "../../../database.json";
+import Router from "next/router";
+
+
 
 function Login() {
   const [username, setUsername] = useState("");
   const [usernameError, setUsernameError] = useState("");
   
-
   const [password, setPassword] = useState("");
   const [passwordError, setPasswordError] = useState("");
 
   const[sucessLogin, setSucessLogin] = useState(false);
 
- 
 
   const handleUsernameChange = (e) => {
     setSucessLogin('');
@@ -28,11 +29,11 @@ function Login() {
   async function verifyLogin({ username, password }) {
     return new Promise ((resolve, reject) => {
       setTimeout(() => {
-        if (username === databaseUsers.username && password === databaseUsers.password) {
-          resolve();
-        } else {
-          reject();
-        }
+        const user = database.users.find((user) => user.username === username && user.password === password);
+       if (!user) {
+      reject();
+    }
+   resolve();
       }, 1000);
     });
   }
@@ -43,6 +44,10 @@ function Login() {
     verifyLogin({ username, password })
       .then(() => {
         setSucessLogin(true);
+        setTimeout(() => {
+        Router.push("/")
+        }, 2000);
+
       }
       )
       .catch(() => {
@@ -50,16 +55,11 @@ function Login() {
         setPasswordError("Username or password incorrect");
       }
       );
+
+
   };
 
-   
-
-    
-  
-
-
   return (
-
     <form onSubmit={handleSubmit} className={styles.login} autoComplete="off">
       <label>Username</label>
       <input
@@ -68,7 +68,6 @@ function Login() {
         placeholder="Enter your username"
         value={username}
         onChange={handleUsernameChange}/><br></br>
-     {usernameError&&<div className={styles.error}>{usernameError}</div>}
       <label>Password</label>
       <input
       required
@@ -79,7 +78,7 @@ function Login() {
        {passwordError&&<div className={styles.error}>{passwordError}</div>}
       <button type="submit" className={styles.submit}>Login
       </button>
-      {sucessLogin&&<div className={styles.sucess}>Login Sucess</div>}
+      {sucessLogin&& <div className={styles.sucess}>Login Sucess</div>}
     </form>
   );
 }

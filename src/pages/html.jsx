@@ -1,6 +1,6 @@
 import Head from 'next/head';
 
-function html() {
+function Html() {
     return (
         <div>
             <Head>
@@ -10,4 +10,4 @@ function html() {
         </div>
     );
 }
-export default html;
+export default Html;
