@@ -1,10 +1,9 @@
 {
     "users": [
-      { "username": "asd", "password": "asd123" },
-      { "username": "asd1", "password": "asd123" }
+      {"id": 1, "username": "asd", "password": "asd123" },
+      {"id": 2, "username": "asd1", "password": "asd123" }
     ],
 
-    
     "results": [
       {
         "category": "Sports",

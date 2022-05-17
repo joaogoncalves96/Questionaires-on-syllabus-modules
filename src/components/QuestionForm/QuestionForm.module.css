@@ -1,0 +1,9 @@
+.wrapper,
+.label {
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper {
+    gap: 10px;
+}
