@@ -1,7 +1,15 @@
 
-  
-            {"username": "asd123",
-                "password": "asd"
-            }
+[
+    {
+        "username": "asd123",
+        "password": "asd",
+        "role": "admin"
+    },
+    {
+        "username": "asd456",
+        "password": "asd123",
+        "role": "user"
+    }
+]
            
 
