@@ -11,10 +11,11 @@ interface User {
 
 interface Questions {
     id: number;
+    category: string;
     questionTitle: string;
-    answers: string [];
+    answers: {id: number, text: string, isCorrect: boolean} [];
     // posterId: number
-    createdAt: number;
+   createdAt: number;
 }
 
 export type { Database, User, Questions };
