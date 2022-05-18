@@ -8,7 +8,7 @@ function MultiChoiceQuestion() {
 
    const [score, setScore] = useState(0);
    const [showFinalResult, setShowFinalResult] = useState(false);
-   const [checked, setChecked] = useState([true, true, true, true, true]);
+   const [checked, setChecked] = useState([false, false, false, false, false]);
 
    useEffect(() => {
       async function loadQuestions() {
