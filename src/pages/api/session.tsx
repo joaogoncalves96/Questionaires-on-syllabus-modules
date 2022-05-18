@@ -3,14 +3,14 @@ import { NextApiRequest, NextApiResponse } from "next";
 import { Database, Question } from "../../database.types"
 
 function readDatabase() {
-    return JSON.parse(fs.readFileSync("database.json", "utf8")) as Database;
+    return JSON.parse(fs.readFileSync("database.json", "utf8"));
 }
 
 function writeDatabase(json) {
     return fs.writeFileSync("database.json", JSON.stringify(json));
 }
 
-function get(request: NextApiRequest, response: NextApiResponse) {
+function get(request, response) {
     const tokenAsString = Buffer.from(request.cookies.token, "base64").toString(
         "utf8"
     );
@@ -32,7 +32,7 @@ function get(request: NextApiRequest, response: NextApiResponse) {
     response.status(200).json(user);
 }
 
-function handler(request: NextApiRequest, response: NextApiResponse) {
+function handler(request, response) {
     switch (request.method) {
         case "GET":
             return get(request, response);

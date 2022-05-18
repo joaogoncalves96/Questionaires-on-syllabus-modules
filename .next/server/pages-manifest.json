@@ -2,13 +2,6 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/profile": "pages/profile.js",
-  "/javascript": "pages/javascript.js",
-  "/css": "pages/css.js",
-  "/html": "pages/html.js",
-  "/react": "pages/react.js",
-  "/": "pages/index.js",
-  "/api/questions": "pages/api/questions.js",
-  "/api/users": "pages/api/users.js",
-  "/api/session": "pages/api/session.js"
+  "/login": "pages/login.js",
+  "/profile": "pages/profile.js"
 }

@@ -38,16 +38,13 @@ function LoginForm() {
   }
 
 
-    function handleSubmit(e: FormEvent<HTMLFormElement>) {
+    function handleSubmit(e) {
         e.preventDefault();
-        
-      /*  const username1 = inputRef.current.value;
-        const password1 = inputRef.current.value;
+        /*
+      const username1 = inputRef.current.value;
+        const password1 = inputRef.current.value;*/
     
-        const json = Buffer.from(JSON.stringify({ })).toString("base64");
-
-        document.cookie = `token=${json}; max-age=9000`;
-     Router.push("/javascript");*/
+        
        
     
 
@@ -57,6 +54,9 @@ function LoginForm() {
             setSucessLogin(true);
             setTimeout(() => {
               Router.push("/profile")
+              const json = Buffer.from(JSON.stringify({ username, password })).toString("base64");
+
+             document.cookie = `token=${json}; max-age=9000`;
             }, 2000);
     
           }

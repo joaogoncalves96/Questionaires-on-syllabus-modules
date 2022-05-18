@@ -15,7 +15,7 @@ function Profile() {
             <Head>
             <title>Profile</title>
             </Head>
-            <h1>Welcome
+            <h1>Welcome {}
             <button onClick={handleLogout}>Logout</button></h1>
         </div>
     );

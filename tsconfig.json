@@ -23,7 +23,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-, "src/components/Login/LoginForm.jsx"  ],
+, "src/components/Login/LoginForm.jsx", "src/pages/react.jsx", "src/components/Footer/Footer.jsx", "src/components/Footer/index.jsx", "src/components/Header/index.jsx", "src/components/Layout/Layout.jsx", "src/components/Layout/index.jsx", "src/components/Nav/index.jsx", "src/pages/api/users.jsx", "src/pages/api/session.jsx", "src/pages/api/questions.jsx", "src/components/QuestionForm/QuestionForm.jsx", "src/components/QuestionForm/index.jsx", "src/components/Question/Question.jsx", "src/components/Question/index.jsx", "src/components/Nav/Nav.jsx", "src/components/Nav/index.jsx", "src/components/Login/LoginForm.jsx", "src/components/Login/index.jsx", "src/components/Layout/Layout.jsx", "src/components/Layout/index.jsx", "src/components/Header/index.jsx", "src/components/Header/Header.jsx", "src/components/Footer/index.jsx", "src/components/Footer/Footer.jsx", "src/components/CommentQuestion/CommentForm.jsx", "src/components/CommentQuestion/Comment.jsx", "src/components/Auth/SessionContext.jsx", "src/components/Auth/SessionContext.jsx", "src/components/Login/LoginForm.jsx"  ],
   "exclude": [
     "node_modules"
   ]

@@ -18,7 +18,7 @@ function Nav() {
                 <Link href='/react'>React</Link>
                 </li>
                 <li>
-                <Link href='/'>Home</Link>
+                <Link href='/profile'>Profile</Link>
                 </li>
                 <li>
                 <Link href='/login'>Login</Link>

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Header from "../components/Header/Header";
-import { Question } from "../components/Question/Question";
-import { QuestionForm } from "../components/QuestionForm/QuestionForm";
+import { Question } from "../components/Post/Post";
+import { QuestionForm } from "../components/PostForm/QuestionForm";
 import { SessionContext } from "../components/Auth/SessionContext"
 import { Question as DatabaseQuestion, User } from "../database.types";
 
@@ -79,8 +79,8 @@ interface Session extends User {
 async function getServerSideProps(context) {
     const { req } = context;
 
-    const [questions, users, session] = await Promise.all([
-        fetch("http://localhost:3000/api/questions").then(
+    const [question, users, session] = await Promise.all([
+     fetch("http://localhost:3000/api/questions").then(
             (res) => res.json() as Promise<DatabaseQuestion[]>
         ),
         fetch("http://localhost:3000/api/users").then(
@@ -98,7 +98,7 @@ async function getServerSideProps(context) {
         userById[user.id] = user;
     }
 
-    const questionsWithAdmin = questions.map((question) => ({
+    const questionsWithAdmin = question.map((question) => ({
         ...question,
         Admin: { id: question.admin, name: userById[question.admin].name },
     }));

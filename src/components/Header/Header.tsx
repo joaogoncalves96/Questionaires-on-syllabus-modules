@@ -6,7 +6,7 @@ function Header () {
     const session = useContext(SessionContext);
     return (
         <div>
-        <h1 className={styles.title}>HackerSwap  </h1>
+        <h1 className={styles.title}>HackerSwap </h1>
         </div>
     )
 }

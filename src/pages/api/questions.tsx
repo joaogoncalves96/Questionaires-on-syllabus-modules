@@ -3,14 +3,14 @@ import { NextApiRequest, NextApiResponse } from "next";
 import { Database, Question } from "../../database.types";
 
 function readDatabase() {
-    return JSON.parse(fs.readFileSync("database.json", "utf8")) as Database;
+    return JSON.parse(fs.readFileSync("database.json", "utf8"));
 }
 
 function writeDatabase(json) {
     return fs.writeFileSync("database.json", JSON.stringify(json));
 }
 
-function get(request: NextApiRequest, response: NextApiResponse) {
+function get(request, response) {
     const database = readDatabase();
 
     const questionsSortedByCategory = database.questions.sort(
@@ -20,7 +20,7 @@ function get(request: NextApiRequest, response: NextApiResponse) {
     response.status(200).json(questionsSortedByCategory);
 }
 
-function post(request: NextApiRequest, response: NextApiResponse) {
+function post(request, response) {
     const { text } = request.body;
 
     const tokenAsString = Buffer.from(request.cookies.token, "base64").toString(
@@ -33,7 +33,7 @@ function post(request: NextApiRequest, response: NextApiResponse) {
 
     const user = database.users.find((user) => user.id === id);
 
-    const newQuestion: Question = {
+    const newQuestion = {
         id: database.questions.length > 0 ? database.questions.at(-1).id + 1 : 1,
         category: text,
         admin: user.id,
@@ -51,7 +51,7 @@ function post(request: NextApiRequest, response: NextApiResponse) {
     response.status(201).send(newQuestion);
 }
 
-function handler(request: NextApiRequest, response: NextApiResponse) {
+function handler(request, response) {
     switch (request.method) {
         case "GET":
             return get(request, response);
