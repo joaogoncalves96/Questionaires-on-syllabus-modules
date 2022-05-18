@@ -1,107 +1,98 @@
 import { useEffect, useState } from "react";
 import styles from "./MultiChoiceQuestion.module.css";
 
-function MultiChoiceQuestion() {
-   const [questions, setQuestions] = useState([]);
-   const [answers, setAnswers] = useState([]);
-   const [questionIndex, setQuestionIndex] = useState(0);
+function MultiChoiceQuestion(props) {
+   const { title, possibleAnswers, correctAnswers, score } = props;
 
-   const [score, setScore] = useState(0);
-   const [showFinalResult, setShowFinalResult] = useState(false);
-   const [checked, setChecked] = useState([true, true, true, true, true]);
+   const [checked, setChecked] = useState(null);
+   const [isCorrect, setIsCorrect] = useState("");
+   const [isToggled, setIsToggled] = useState(false);
+   const [points, setPoints] = useState(0);
 
-   useEffect(() => {
-      async function loadQuestions() {
-         const response = await fetch(`http://localhost:3001/questions`);
-         const json = await response.json();
-         const filteredQuestions = json.filter((question) => question.type === "multiple-choice");
-         const questions = filteredQuestions.map((question) => question.title);
-         const answers = filteredQuestions.map((question) => question.answers);
+   function onValueChange(e) {
+      setChecked(e.target.value);
+   }
+   // console.log(checked);
 
-         setQuestions(questions);
-         setAnswers(answers);
+   function handleSubmit(e) {
+      e.preventDefault();
+      setIsToggled(true);
+      const form = e.target;
+      const inputs = Array.from(form.querySelectorAll("input"));
+      const answers = inputs.map((input) => {
+         return { value: input.value, checked: input.checked };
+      });
+
+      const selectedAnswers = answers.filter((answer) => answer.checked === true);
+      // console.log(selectedAnswers);
+
+      for (let i = 0; i < correctAnswers.length; i++) {
+         if (selectedAnswers.length !== correctAnswers.length) {
+            setIsCorrect(false);
+            // console.log("incorrect");
+            return;
+         }
+         if (correctAnswers[i] === selectedAnswers[i].value) {
+            // console.log("correct");
+            setIsCorrect(true);
+            score(1);
+            return;
+         } else {
+            setIsCorrect(false);
+            // console.log("incorrect");
+            return;
+         }
       }
-      loadQuestions();
-   }, []);
-
-   //    function optionClicked() {
-   //       for (const answer of answers) {
-   //          if (isCorrect) {
-   //             setScore(score + 1);
-   //          }
-
-   //          if (questionIndex + 1 < questions.length) {
-   //             setQuestionIndex(questionIndex + 1);
-   //          } else {
-   //             setShowFinalResult(true);
-   //          }
-   //       }
-   //    }
-
-   function restartGame() {
-      setScore(0);
-      setQuestionIndex(0);
-      setShowFinalResult(false);
    }
 
-   //    const handleChange = (e) => {
-   //       setChecked(!checked);
-   //       console.log(e, checked);
-   //    };
 
-   const handleChange = (position) => {
-      const updatedCheckedState = checked.map((item, index) => (index === position ? !item : item));
-
-      setChecked(updatedCheckedState);
-      console.log(position, checked);
-   };
-
-   function handleClick(e) {
-      console.log(e);
-   }
-
+   
    return (
-      <div className={styles.app}>
-         {showFinalResult ? (
-            <div className={styles.finalResults}>
-               <h1>Final Results</h1>
-               <h2>
-                  {score} out of {questions.length} correct ➡️ ({(score / questions.length) * 100}%)
-               </h2>
-               <button className={styles.restartGame} onClick={() => restartGame()}>
-                  Restart game
-               </button>
+      <form onSubmit={handleSubmit} className={styles.questionCard}>
+         <h3 className={styles.questionTitle}>{title}</h3>
+         <div className={styles.possibleAnswers}>
+            {!isToggled &&
+               possibleAnswers?.map((answer) => {
+                  return (
+                     <div key={answer.id}>
+                        <input id={answer.id} type="checkbox" name="answer" value={answer} onChange={onValueChange} />
+                        <label>{answer}</label>
+                     </div>
+                  );
+               })}
+         </div>
+         {isToggled ? (
+            <div>
+               {isCorrect ? "CORRECT ✔️" : "INCORRECT ❌"} <span>Correct answers are: {correctAnswers}</span>{" "}
             </div>
          ) : (
-            <div className={styles.questionCard}>
-               <h3 className={styles.category}>Multi Choice Questions</h3>
-               <h4 className={styles.currentScore}>Current score: {score}</h4>
-               <h4 className={styles.questionTitle}>{questions[questionIndex]}</h4>
-               <div className={styles.answers}>
-                  <div class="form-row">
-                     <ul>
-                        {answers[questionIndex]?.map((answer, index) => (
-                           <label for="renderedChecked">
-                              <input
-                                 type="checkbox"
-                                 id="renderedChecked"
-                                 name="subscribe"
-                                 value="rendered-checked"
-                                 //  checked={checked[index]}
-                                 onChange={() => handleChange(index)}
-                              />
-                              {answer}
-                           </label>
-                        ))}
-                     </ul>
-                  </div>
-               </div>
-               <button className={styles.nextQuestionButton} onClick={() => handleClick()}>
-                  Next Question
-               </button>
-            </div>
+            <button type="submit">Check</button>
          )}
-      </div>
+      </form>
    );
 }
+
 export default MultiChoiceQuestion;
+
+//             <form onSubmit={handleSubmit} className={styles.checkboxes}>
+//                <ul>
+//                   {answers[questionIndex]?.map((answer, index) => (
+//                      <label>
+//                         <input
+//                            type="checkbox"
+//                            //  name={answer.id}
+//                            value={answer}
+//                            onChange={() => handleCheckboxChange(answer)}
+//                         />
+//                         {answer}
+//                      </label>
+//                   ))}
+//                </ul>
+//                <button className={styles.nextQuestionButton} type="submit">
+//                   Next Question
+//                </button>
+//             </form>
+//          </div>
+//       </div>
+//    )}
+// </div>

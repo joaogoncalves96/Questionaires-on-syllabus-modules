@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "incremental": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve"
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx"
+, "src/components/SingleChoiceQuestion/SingleChoiceQuestion.jsx", "src/components/TrueOrFalseQuestion/TrueOrFalseQuestion.jsx", "src/components/TrueOrFalseQuestion/index.jsx", "src/pages/_app.jsx", "src/pages/css.jsx", "src/pages/html.jsx", "src/pages/index.jsx", "src/pages/javascript.jsx", "src/pages/react.jsx", "src/components/SingleChoiceQuestion/index.jsx"  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
