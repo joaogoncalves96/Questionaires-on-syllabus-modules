@@ -3,7 +3,7 @@ import { NextApiRequest, NextApiResponse } from "next";
 
 interface Database {
     users: User[];
-    questions: Question[];
+    posts: Post[];
 }
 
 interface User {
@@ -11,14 +11,12 @@ interface User {
     name: string;
 }
 
-interface Question {
+interface Post {
     id: number;
-    category: string;
-    type: string;
-    title: string;
-    admin: number;
-    answers: number[];
-    correctAnswer: number[];
+    text: string;
+    author: number;
+    comments: number[];
+    points: number;
 }
 
 function readDatabase() {

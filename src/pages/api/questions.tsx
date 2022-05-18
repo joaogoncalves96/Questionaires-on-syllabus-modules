@@ -1,6 +1,8 @@
 import fs from "fs";
 import { NextApiRequest, NextApiResponse } from "next";
-import { Database, Question } from "../../database.types";
+// import {database} from "../../../database.json"
+import { Database } from "../../database.types";
+import { Questions } from "../../database.types";
 
 function readDatabase() {
     return JSON.parse(fs.readFileSync("database.json", "utf8")) as Database;
@@ -13,35 +15,40 @@ function writeDatabase(json) {
 function get(request: NextApiRequest, response: NextApiResponse) {
     const database = readDatabase();
 
-    const questionsSortedByCategory = database.questions.sort(
-        (a, b) => b.createdAt - a.createdAt
+    const postsSortedByDateAscending = database.questions.sort(
+        (a, b) => a.createdAt - b.createdAt
     );
 
-    response.status(200).json(questionsSortedByCategory);
+    response.status(200).json(postsSortedByDateAscending);
 }
 
 function post(request: NextApiRequest, response: NextApiResponse) {
-    const { text } = request.body;
+    const { questionTitle, answers } = request.body;
 
-    const tokenAsString = Buffer.from(request.cookies.token, "base64").toString(
-        "utf8"
-    );
-    const token = JSON.parse(tokenAsString);
-    const id = parseInt(token.id, 10);
+    // const tokenAsString = Buffer.from(request.cookies.token, "base64").toString(
+    //     "utf8"
+    // );
+
+    // console.log("tokenAsString", tokenAsString);
+
+    // const token = JSON.parse(tokenAsString);
+
+    // console.log("token", token);
+
+    // const id = parseInt(token.id, 10);
+
+    // console.log("id", id);
 
     const database = readDatabase();
 
-    const user = database.users.find((user) => user.id === id);
+    // const user = database.users.find((user) => user.id === id);
 
-    const newQuestion: Question = {
+    const newQuestion: Questions = {
         id: database.questions.length > 0 ? database.questions.at(-1).id + 1 : 1,
-        category: text,
-        admin: user.id,
-        answers: [],
+        // id: number;
+        questionTitle,
+        answers,
         createdAt: Date.now(),
-        type: "",
-        title: "",
-        correctAnswer: []
     };
 
     database.questions.push(newQuestion);

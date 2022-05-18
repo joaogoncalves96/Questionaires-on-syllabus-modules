@@ -1,0 +1,171 @@
+{
+
+"categorys": [
+    {
+        "javascript": [
+            {
+        "question": "How do you create a function in JavaScript?",
+        "answers" : [ 
+          { "id": 0, "text": "function myFunction()", "isCorrect": true },
+          { "id": 1, "text": "function:myFunction()", "isCorrect": false },
+          { "id": 2, "text": "function MyFunction()", "isCorrect": false },
+          { "id": 3, "text": "function = myFunction()", "isCorrect": false }
+        ]
+            },
+            {
+                "question": "How do you write 'Hello World' in an alert box?",
+                "answers" : [ 
+                  { "id": 0, "text": "alertBox('Hello World')", "isCorrect": false },
+                  { "id": 1, "text": "msg('Hello World)", "isCorrect": false },
+                  { "id": 2, "text": "msgBox('Hello World')", "isCorrect": false },
+                  { "id": 3, "text": "alert('Hello World')", "isCorrect": true }
+                ]
+            }
+
+        ]
+    },
+    {
+        "html" : [
+            {
+        "question": "How do you create a function in JavaScript?",
+        "answers" : [ 
+          { "id": 0, "text": "function myFunction()", "isCorrect": true },
+          { "id": 1, "text": "function:myFunction()", "isCorrect": false },
+          { "id": 2, "text": "function MyFunction()", "isCorrect": false },
+          { "id": 3, "text": "function = myFunction()", "isCorrect": false }
+        ]
+    }
+        ]
+    },
+    {
+        "css" : [
+            {
+        "question": "How do you create a function in JavaScript?",
+        "answers" : [ 
+          { "id": 0, "text": "function myFunction()", "isCorrect": true },
+          { "id": 1, "text": "function:myFunction()", "isCorrect": false },
+          { "id": 2, "text": "function MyFunction()", "isCorrect": false },
+          { "id": 3, "text": "function = myFunction()", "isCorrect": false }
+        ]
+    }
+        ]
+    }
+]
+      
+        
+
+
+      
+        
+        
+        "JavaScript",
+        "type": "multiple",
+        "question": "How do you create a function in JavaScript?",
+        "answers" : [ 
+          { "id": 0, "text": "function myFunction()", "isCorrect": true },
+          { "id": 1, "text": "function:myFunction()", "isCorrect": false },
+          { "id": 2, "text": "function MyFunction()", "isCorrect": false },
+          { "id": 3, "text": "function = myFunction()", "isCorrect": false }
+        ]
+      },
+      {
+        "category": "JavaScript",
+        "type": "multiple",
+        "question": "How do you write 'Hello World' in an alert box?",
+        "answers" : [ 
+          { "id": 0, "text": "alertBox('Hello World')", "isCorrect": false },
+          { "id": 1, "text": "msg('Hello World)", "isCorrect": false },
+          { "id": 2, "text": "msgBox('Hello World')", "isCorrect": false },
+          { "id": 3, "text": "alert('Hello World')", "isCorrect": true }
+        ]
+      },
+      {
+        "category": "JavaScript",
+        "type": "multiple",
+        "question": "What will the following code return: Boolean(10 > 9)?",
+        "answers" : [ 
+          { "id": 0, "text": "true", "isCorrect": true },
+          { "id": 1, "text": "false", "isCorrect": false },
+          { "id": 2, "text": "Nan", "isCorrect": false },
+          { "id": 3, "text": "undefined", "isCorrect": false }
+        ]
+      },
+      {
+        "category": "HTML",
+        "type": "multiple",
+        "question": "How can you make a numbered list?",
+        "answers" : [ 
+          { "id": 0, "text": "<ol>", "isCorrect": true },
+          { "id": 1, "text": "<ul>", "isCorrect": false },
+          { "id": 2, "text": "<list>", "isCorrect": false },
+          { "id": 3, "text": "<dl>", "isCorrect": false }
+        ]
+      },
+      {
+        "category": "HTML",
+        "type": "multiple",
+        "question": "Which HTML element defines navigation links?",
+        "answers" : [ 
+          { "id": 0, "text": "<navigate>", "isCorrect": false },
+          { "id": 1, "text": "<navigation>", "isCorrect": false },
+          { "id": 2, "text": "<nav>", "isCorrect": true },
+          { "id": 3, "text": "<link nav>", "isCorrect": false }
+        ]
+      },
+      {
+        "category": "CSS",
+        "type": "multiple",
+        "question": "What does CSS stand for?",
+        "answers" : [ 
+          { "id": 0, "text": "Pittsburgh Steelers", "isCorrect": false },
+          { "id": 1, "text": "Colorful Style Sheets", "isCorrect": false },
+          { "id": 2, "text": "Cascading Style Sheets", "isCorrect": true },
+          { "id": 3, "text": "Creative Style Sheets", "isCorrect": false }
+        ]
+      },
+      {
+        "category": "CSS",
+        "type": "multiple",
+        "question": "How do you select an element with id 'demo'?",
+        "answers" : [ 
+          { "id": 0, "text": "*demo", "isCorrect": false },
+          { "id": 1, "text": "demo", "isCorrect": false },
+          { "id": 2, "text": "#demo", "isCorrect": true },
+          { "id": 3, "text": ".demo", "isCorrect": false }
+        ]
+      },
+      {
+        "category": "REACT",
+        "type": "multiple",
+        "question": "How a component should be declared?",
+        "answers" : [ 
+          { "id": 0, "text": "myFunction () {}", "isCorrect": false },
+          { "id": 1, "text": "MyFunction {}", "isCorrect": false },
+          { "id": 2, "text": "MyFunction () {}", "isCorrect": true },
+          { "id": 3, "text": "myFunction ()", "isCorrect": false }
+        ]
+      },
+      {
+        "category": "REACT",
+        "type": "multiple",
+        "question": "What is the default local host port that a React development server uses?",
+        "answers" : [ 
+          { "id": 0, "text": "8080", "isCorrect": false },
+          { "id": 1, "text": "5000", "isCorrect": false },
+          { "id": 2, "text": "3000", "isCorrect": true },
+          { "id": 3, "text": "3500", "isCorrect": false }
+        ]
+      },
+      {
+        "category": "REACT",
+        "type": "multiple",
+        "question": "A copy of the 'real' DOM that is kept in memory is called what?",
+        "answers" : [ 
+          { "id": 0, "text": "DOM", "isCorrect": false },
+          { "id": 1, "text": "React DOM", "isCorrect": false },
+          { "id": 2, "text": "Virtual DOM", "isCorrect": true },
+          { "id": 3, "text": "Shadow DOM", "isCorrect": false }
+        ]
+      }
+    ]
+  }
