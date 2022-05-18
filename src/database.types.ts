@@ -1,25 +1,20 @@
 interface Database {
     users: User[];
-    questions: Question[];
+    questions: Questions[];
 }
 
 interface User {
-    name: any;
+    [x: string]: any;
     id: number;
-    username: string;
-    password: string;
-
+    name: string;
 }
 
-interface Question {
+interface Questions {
     id: number;
-    category: string;
-    type: string;
-    title: string;
-    admin: number;
-    answers: number[];
-    correctAnswer: number[];
+    questionTitle: string;
+    answers: string [];
+    // posterId: number
     createdAt: number;
 }
 
-export type { Database, User, Question };
+export type { Database, User, Questions };

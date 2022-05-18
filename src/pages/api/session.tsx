@@ -1,6 +1,6 @@
 import fs from "fs";
 import { NextApiRequest, NextApiResponse } from "next";
-import { Database, Question } from "../../database.types"
+import { Database } from "../../database.types";
 
 function readDatabase() {
     return JSON.parse(fs.readFileSync("database.json", "utf8")) as Database;
@@ -16,14 +16,18 @@ function get(request: NextApiRequest, response: NextApiResponse) {
     );
     const token = JSON.parse(tokenAsString);
 
-    const id = parseInt(token.id, 10);
+    // const id = parseInt(token.id, 10);
 
-    if (isNaN(id)) {
-        return response.status(403).end();
-    }
+    const username = token.username;
+
+    // if (isNaN(id)) {
+    //     return response.status(403).end();
+    // }
 
     const database = readDatabase();
-    const user = database.users.find((user) => user.id === id);
+    const user = database.users.find((user) => user.username === username);
+
+    console.log(user)
 
     if (!user) {
         return response.status(403).end();
