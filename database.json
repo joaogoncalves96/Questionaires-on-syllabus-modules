@@ -48,7 +48,29 @@
          "answers": ["answer1", "answer2", "answer3", "answer4"],
          "correctAnswer": ["answer4", "answer3"]
       },
-      { "id": 5, "questionTitle": "hahaha", "answers": "fasdfdsafas", "createdAt": 1652906829341 },
-      { "id": 6, "questionTitle": "hahaha", "answers": "fasdfdsafas", "createdAt": 1652906832368 }
+      {
+         "id": 5,
+         "category": "false",
+         "questionTitle": "aaaaa",
+         "answers": [
+            { "text": "ahahaha", "isCorrect": true },
+            { "text": "sssssssss", "isCorrect": false },
+            { "text": "dsafads", "isCorrect": false },
+            { "text": "fadsfsad", "isCorrect": false }
+         ],
+         "createdAt": 1652912385868
+      },
+      {
+         "id": 6,
+         "category": "JavaScript",
+         "questionTitle": "fasdfsad",
+         "answers": [
+            { "text": "aaaaa", "isCorrect": true },
+            { "text": "assss", "isCorrect": false },
+            { "text": "dddd", "isCorrect": false },
+            { "text": "ffff", "isCorrect": false }
+         ],
+         "createdAt": 1652912445064
+      }
    ]
 }

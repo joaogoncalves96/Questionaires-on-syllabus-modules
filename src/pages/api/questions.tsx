@@ -23,7 +23,7 @@ function get(request: NextApiRequest, response: NextApiResponse) {
 }
 
 function post(request: NextApiRequest, response: NextApiResponse) {
-    const { questionTitle, answers } = request.body;
+    const {category, questionTitle, answers } = request.body;
 
     // const tokenAsString = Buffer.from(request.cookies.token, "base64").toString(
     //     "utf8"
@@ -45,10 +45,10 @@ function post(request: NextApiRequest, response: NextApiResponse) {
 
     const newQuestion: Questions = {
         id: database.questions.length > 0 ? database.questions.at(-1).id + 1 : 1,
-        // id: number;
+        category,
         questionTitle,
-        answers,
-        createdAt: Date.now(),
+        answers, 
+       createdAt: Date.now(),
     };
 
     database.questions.push(newQuestion);
