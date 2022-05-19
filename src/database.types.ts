@@ -11,10 +11,12 @@ interface User {
 
 interface Questions {
     id: number;
-    category: string;
+    categories: string [];
+    type: string;
     questionTitle: string;
     answers: {id: number, text: string, isCorrect: boolean} [];
     // posterId: number
+    correctAnswers: string [];
    createdAt: number;
 }
 

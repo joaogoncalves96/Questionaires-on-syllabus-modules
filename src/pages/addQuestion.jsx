@@ -1,5 +1,5 @@
 import Head from "next/head";
-import AddQuestionsForm from "../components/AddQuestionsForm/AddQuestionsForm";
+import AddAllQuestionsForm from "../components/AddQuestionsForm/AddAllQuestionsForm";
 
 function addQuestion() {
    return (
@@ -7,8 +7,7 @@ function addQuestion() {
          <Head>
             <title>HTML</title>
          </Head>
-         {/* <h1>HTML</h1> */}
-         <AddQuestionsForm />
+         <AddAllQuestionsForm />
       </div>
    );
 }
