@@ -14,12 +14,21 @@
     "json-server": "^0.17.0",
     "next": "^12.1.6",
     "react": "^18.1.0",
-    "react-dom": "^18.1.0"
+    "react-dom": "^18.1.0",
+    "react-scripts": "^5.0.1"
   },
   "devDependencies": {
     "@types/node": "^17.0.33",
     "@types/react": "^18.0.9",
     "@types/react-dom": "^18.0.4",
     "typescript": "^4.6.4"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joaogoncalves96/Questionaires-on-syllabus-modules.git"
+  },
+  "bugs": {
+    "url": "https://github.com/joaogoncalves96/Questionaires-on-syllabus-modules/issues"
+  },
+  "homepage": "https://github.com/joaogoncalves96/Questionaires-on-syllabus-modules#readme"
 }

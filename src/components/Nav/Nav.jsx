@@ -21,6 +21,9 @@ function Nav() {
             <li>
                <Link href="/">Home</Link>
             </li>
+            <li>
+               <Link href="/addQuestion">Add a Question</Link>
+            </li>
          </ul>
       </nav>
    );
