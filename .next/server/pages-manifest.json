@@ -2,5 +2,6 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/api/questions": "pages/api/questions.js"
+  "/javascript": "pages/javascript.js",
+  "/addQuestionTrueOrFalse": "pages/addQuestionTrueOrFalse.js"
 }
