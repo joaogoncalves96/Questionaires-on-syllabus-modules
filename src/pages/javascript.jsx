@@ -1,18 +1,14 @@
 import Head from "next/head";
-import SingleChoiceQuestion from "../components/SingleChoiceQuestion/SingleChoiceQuestion";
-import MultiChoiceQuestion from "../components/MultiChoiceQuestion/MultiChoiceQuestion";
+import Questionaire from "../components/Questionaire/Questionaire";
 
 function JavaScript() {
-   // const { category } = props;
-
    return (
       <div>
          <Head>
             <title>Javascript</title>
          </Head>
-         {/* <h1>JavaScript</h1> */}
-         {/* <SingleChoiceQuestion /> */}
-         <MultiChoiceQuestion />
+         <Questionaire id={2} />
+         {/* <Questionaire id={1} /> */}
       </div>
    );
 }
