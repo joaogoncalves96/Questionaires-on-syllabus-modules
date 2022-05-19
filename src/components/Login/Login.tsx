@@ -16,13 +16,20 @@ function Login() {
       const username = inputRef1.current.value;
       const password = inputRef2.current.value;
 
-      const validUsername = database.users.find((user) => user.username === username).username;
-      const validPassword = database.users.find((user) => user.password === password).password;
+      const validUsername = database.users.find((user) => user.username === username)?.username;
+      const validPassword = database.users.find((user) => user.password === password)?.password;
 
+      if (username === "admin" && password === validPassword) {
+         setSuccessLogin(true);
+
+         setTimeout(() => Router.push("/adminPage"), 700);
+         return;
+      }
       if (username === validUsername && password === validPassword) {
          setSuccessLogin(true);
 
-         setTimeout(() => Router.push("/"), 2000);
+         setTimeout(() => Router.push("/home"), 700);
+         return;
       }
 
       // console.log("username " + username);

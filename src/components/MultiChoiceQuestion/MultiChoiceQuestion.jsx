@@ -50,19 +50,33 @@ function MultiChoiceQuestion(props) {
             {!isToggled &&
                possibleAnswers?.map((answer) => {
                   return (
-                     <div key={answer.id}>
-                        <input id={answer.id} type="checkbox" name="answer" value={answer} onChange={onValueChange} />
+                     <div key={answer.id} className={styles.answer}>
+                        <input
+                           id={answer.id}
+                           type="checkbox"
+                           name="answer"
+                           value={answer}
+                           onChange={onValueChange}
+                           required={possibleAnswers.length < 1}
+                        />
                         <label>{answer}</label>
                      </div>
                   );
                })}
          </div>
          {isToggled ? (
-            <div>
-               {isCorrect ? "CORRECT ✔️" : "INCORRECT ❌"} <span>Correct answers are: {correctAnswers}</span>{" "}
+            <div className={styles.correctOrIncorrect}>
+               {isCorrect ? (
+                  <div className={styles.correct}>CORRECT ✔️👍</div>
+               ) : (
+                  <div className={styles.incorrect}>INCORRECT ❌👎</div>
+               )}{" "}
+               <div className={styles.correctAnswer}>Correct answer ➡️ {correctAnswers}</div>{" "}
             </div>
          ) : (
-            <button type="submit">Check</button>
+            <button type="submit" className={styles.buttonCheck}>
+               Check
+            </button>
          )}
       </form>
    );

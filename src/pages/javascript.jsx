@@ -5,6 +5,8 @@ function JavaScript() {
    return (
       <div>
          <Questionaire id={2} />
+         <Questionaire id={1} />
+         <Questionaire id={3} />
       </div>
    );
 }
