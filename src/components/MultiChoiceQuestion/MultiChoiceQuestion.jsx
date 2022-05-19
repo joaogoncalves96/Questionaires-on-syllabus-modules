@@ -32,13 +32,12 @@ function MultiChoiceQuestion(props) {
             return;
          }
          if (correctAnswers[i] === selectedAnswers[i].value) {
-            // console.log("correct");
             setIsCorrect(true);
             score(1);
             return;
          } else {
             setIsCorrect(false);
-            // console.log("incorrect");
+
             return;
          }
       }
