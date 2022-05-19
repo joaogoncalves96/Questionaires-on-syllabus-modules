@@ -12,10 +12,10 @@ function writeDatabase(json) {
     return fs.writeFileSync("database.json", JSON.stringify(json));
 }
 
-function get(request: NextApiRequest, response: NextApiResponse) {
+ function get(request: NextApiRequest, response: NextApiResponse) {
     const database = readDatabase();
 
-    const postsSortedByDateAscending = database.questions.sort(
+   const postsSortedByDateAscending = database.questions.sort(
         (a, b) => a.createdAt - b.createdAt
     );
 
@@ -23,7 +23,7 @@ function get(request: NextApiRequest, response: NextApiResponse) {
 }
 
 function post(request: NextApiRequest, response: NextApiResponse) {
-    const {category, questionTitle, answers } = request.body;
+    const {categories, type, questionTitle, answers, correctAnswers } = request.body;
 
     // const tokenAsString = Buffer.from(request.cookies.token, "base64").toString(
     //     "utf8"
@@ -45,10 +45,12 @@ function post(request: NextApiRequest, response: NextApiResponse) {
 
     const newQuestion: Questions = {
         id: database.questions.length > 0 ? database.questions.at(-1).id + 1 : 1,
-        category,
+        categories,
+        type,
         questionTitle,
         answers, 
-       createdAt: Date.now(),
+        correctAnswers,
+      createdAt: Date.now(),
     };
 
     database.questions.push(newQuestion);

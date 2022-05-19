@@ -14,21 +14,21 @@ function Login() {
         const username = inputRef1.current.value;
         const password = inputRef2.current.value;
 
-        const validUsername = database.users.find((user) => user.username === username).username;
-        const validPassword = database.users.find((user) => user.password === password).password;
+        const validUsername = database.users.find((user) => user.username === username)?.username;
+        const validPassword = database.users.find((user) => user.password === password)?.password;
 
         if(username === validUsername && password === validPassword) {
             setSuccessLogin(true);
             setTimeout(()=> Router.push("/"), 2000);
         }
 
-        // console.log("username " + username);
+        console.log("username " + username);
 
-        // const json = Buffer.from(JSON.stringify({ username})).toString("base64");
+        const json = Buffer.from(JSON.stringify({ username})).toString("base64");
 
-        // console.log("json " + json);
+        console.log("json " + json);
 
-        // document.cookie = `token=${json}; max-age=9000`;
+        document.cookie = `token=${json}; max-age=9000`;
 
         // console.log("cookie", document.cookie);
 
