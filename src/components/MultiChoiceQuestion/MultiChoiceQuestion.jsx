@@ -29,7 +29,6 @@ function MultiChoiceQuestion(props) {
       for (let i = 0; i < correctAnswers.length; i++) {
          if (selectedAnswers.length !== correctAnswers.length) {
             setIsCorrect(false);
-            // console.log("incorrect");
             return;
          }
          if (correctAnswers[i] === selectedAnswers[i].value) {
@@ -45,8 +44,6 @@ function MultiChoiceQuestion(props) {
       }
    }
 
-
-   
    return (
       <form onSubmit={handleSubmit} className={styles.questionCard}>
          <h3 className={styles.questionTitle}>{title}</h3>
