@@ -41,7 +41,7 @@ function SingleChoiceQuestion(props) {
             {!isToggled &&
                possibleAnswers?.map((answer) => {
                   return (
-                     <div key={answer.id}>
+                     <div key={answer.id} className={styles.answer}>
                         <input id={answer.id} type="radio" name="answer" value={answer} onChange={onValueChange} />
                         <label>{answer}</label>
                      </div>
@@ -49,12 +49,18 @@ function SingleChoiceQuestion(props) {
                })}
          </div>
          {isToggled ? (
-            <div>
-               {isCorrect ? "CORRECT ✔️" : "INCORRECT ❌"}{" "}
-               <span>Correct answer is: {answer.map((answer) => answer.text)}</span>
+            <div className={styles.correctOrIncorrect}>
+               {isCorrect ? (
+                  <span className={styles.correct}>CORRECT ✔️</span>
+               ) : (
+                  <span className={styles.incorrect}>INCORRECT ❌</span>
+               )}{" "}
+               <span className={styles.correctAnswer}>Correct answer is: {answer.map((answer) => answer.text)}</span>
             </div>
          ) : (
-            <button type="submit">Check</button>
+            <button type="submit" className={styles.buttonCheck}>
+               Check
+            </button>
          )}
       </form>
    );

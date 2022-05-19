@@ -1,11 +1,12 @@
 html {
     margin: 0;
-    /* background-color: black;
-    color: azure; */
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     color: aliceblue;
     background-color: black;
 }
+
+
+

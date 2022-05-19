@@ -4,10 +4,6 @@ import SingleChoiceQuestion from "../components/SingleChoiceQuestion/SingleChoic
 function React() {
    return (
       <div>
-         <Head>
-            <title>React</title>
-         </Head>
-         {/* <h1>React</h1> */}
          <SingleChoiceQuestion />
       </div>
    );

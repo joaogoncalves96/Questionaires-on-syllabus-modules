@@ -30,25 +30,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/addQuestion": [
+    "/react": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/addQuestion.js"
-    ],
-    "/css": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/css.js"
-    ],
-    "/html": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/html.js"
-    ],
-    "/javascript": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/javascript.js"
+      "static/chunks/pages/react.js"
     ]
   },
   "ampFirstPages": []

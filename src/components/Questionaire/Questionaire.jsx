@@ -24,7 +24,6 @@ function Questionaire(props) {
          setQuestionsById(questions.filter((question) => questionaire.questions.includes(question.id)));
 
          console.log(questionsById);
-         //   console.log(question.type)
       }
       loadInformation();
    }, []);
@@ -40,8 +39,8 @@ function Questionaire(props) {
    }
 
    return (
-      <>
-         <div className={styles.questionaire}>Your current score is: {score}</div>
+      <div className={styles.questionaire}>
+         <div className={styles.score}>Your current score is: {score}</div>
 
          {questionsById.map((question) => {
             switch (question.type) {
@@ -79,7 +78,14 @@ function Questionaire(props) {
                   return null;
             }
          })}
-      </>
+         <div className={styles.finalResults}>
+            <h2>Final Results</h2>
+            <h3>
+               {score} out of {questionsById.length} are correct ➡️ ({Math.round((score / questionsById.length) * 100)}
+               %)
+            </h3>
+         </div>
+      </div>
    );
 }
 export default Questionaire;

@@ -1,21 +1,22 @@
 .nav {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100px;
+    /* justify-content:flex-start ; */
+    /* flex-direction: column-reverse; */
+    /* align-items: center; */
+    /* height: 100px; */
 }
 
-.nav ul {
+.categories {
     display: flex;
     list-style: none;
     align-items: center;
-    justify-content: center;
-}
+    justify-content: flex-start;
+} 
 
-.nav ul li a {
+.homeAndAddQuestion {
     text-decoration: none;
     color: white;
     font-size: 20px;
     font-weight: bold;
     padding: 10px;
-}
+} 

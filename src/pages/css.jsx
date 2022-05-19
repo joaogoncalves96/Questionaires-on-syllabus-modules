@@ -4,10 +4,6 @@ import SingleChoiceQuestion from "../components/SingleChoiceQuestion/SingleChoic
 function Css() {
    return (
       <div>
-         <Head>
-            <title>CSS</title>
-         </Head>
-         {/* <h1>CSS</h1> */}
          <SingleChoiceQuestion />
       </div>
    );
