@@ -3,7 +3,6 @@ import { FormEvent, useRef, useState } from "react";
 // import styles from "./AddQuestionsFormMultiple.module.css";
 
 function AddQuestionsFormMultiple() {
-
    //  const { onSubmit } = props;
    const categoriesareaRef = useRef(null);
    const secundaryareaRef = useRef(null);
@@ -15,9 +14,11 @@ function AddQuestionsFormMultiple() {
    const answerareaRef2 = useRef(null);
    const answerareaRef3 = useRef(null);
 
-   //    const correctAnswerareaRef = useRef(null);
-   //    const correctAnswerareaRef1 = useRef(null);
-
+    const trueorFalseareaRef = useRef(null);
+    const trueorFalseareaRef1 = useRef(null);
+    const trueorFalseareaRef2 = useRef(null);
+    const trueorFalseareaRef3 = useRef(null);
+      
    async function handleSubmit(e) {
       e.preventDefault();
 
@@ -31,12 +32,13 @@ function AddQuestionsFormMultiple() {
             type: typeareaRef.current.value,
             questionTitle: questionareaRef.current.value,
             answers: [
-               answerareaRef.current.value,
+                answerareaRef.current.value,
                answerareaRef1.current.value,
                answerareaRef2.current.value,
                answerareaRef3.current.value,
             ],
-            correctAnswers: [false, false, false, false],
+            correctAnswers: [ 
+            ],
          }),
       });
 
@@ -46,7 +48,7 @@ function AddQuestionsFormMultiple() {
       //       onSubmit(question);
       //   }
    }
-   
+
    return (
       <form onSubmit={handleSubmit}>
          <label>
@@ -79,12 +81,10 @@ function AddQuestionsFormMultiple() {
          <label>
             correct?
             <textarea ref={answerareaRef} name="answers" />
-            <input type="checkbox" name="correctAnswers" />
          </label>
          <label>
             correct?
             <textarea ref={answerareaRef1} name="answers" />
-            <input type="checkbox" name="correctAnswers"  />
          </label>
          <label>
             correct?
@@ -94,7 +94,6 @@ function AddQuestionsFormMultiple() {
             correct?
             <textarea ref={answerareaRef3} name="answers" />
          </label>
-
          <button type="submit">Add question</button>
       </form>
    );
