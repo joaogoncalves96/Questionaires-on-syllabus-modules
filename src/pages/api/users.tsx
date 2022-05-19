@@ -9,6 +9,8 @@ interface Database {
 interface User {
     id: number;
     name: string;
+    username: string;
+    password: string;
 }
 
 interface Post {
@@ -40,7 +42,9 @@ function post(request: NextApiRequest, response: NextApiResponse) {
 
     const newUser: User = {
         id: database.users.length > 0 ? database.users.at(-1).id + 1 : 1,
-        name,
+        name, 
+        username: "", 
+        password: "",
     };
 
     database.users.push(newUser);
