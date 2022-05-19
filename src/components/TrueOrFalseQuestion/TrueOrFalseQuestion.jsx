@@ -36,9 +36,6 @@ function TrueOrFalseQuestion(props) {
       }
    }
 
-   // console.log(answer.map((answer) => answer.text));
-   // console.log(isToggled);
-
    return (
       <form onSubmit={handleSubmit} className={styles.questionCard}>
          <h3 className={styles.questionTitle}>{title}</h3>
