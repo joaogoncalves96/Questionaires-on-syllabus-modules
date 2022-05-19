@@ -24,7 +24,7 @@ function AddQuestionsForm() {
             category: categoryareaRef.current.value,
             questionTitle: questionareaRef.current.value,
             answers: [
-                {
+                { 
                     text: answerareaRef.current.value,
                     isCorrect: true,
                 },
