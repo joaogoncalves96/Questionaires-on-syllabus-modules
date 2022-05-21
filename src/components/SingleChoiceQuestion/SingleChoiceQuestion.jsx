@@ -7,12 +7,10 @@ function SingleChoiceQuestion(props) {
    const [checked, setChecked] = useState(null);
    const [isCorrect, setIsCorrect] = useState("");
    const [isToggled, setIsToggled] = useState(false);
-   // const [points, setPoints] = useState(0);
 
    function onValueChange(e) {
       setChecked(e.target.value);
    }
-   // console.log(checked);
 
    function handleSubmit(e) {
       e.preventDefault();
@@ -20,7 +18,6 @@ function SingleChoiceQuestion(props) {
       const form = e.target;
       const inputs = Array.from(form.querySelectorAll("input"));
       const answers = inputs.map((input) => input.value);
-      // console.log(answers);
 
       for (let i = 0; i < answers.length; i++) {
          if (answers[i] === checked) {

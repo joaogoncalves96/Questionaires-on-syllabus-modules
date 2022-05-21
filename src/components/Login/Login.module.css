@@ -19,6 +19,12 @@
     align-items: center;
     box-shadow: 12px 0 15px -4px rgba(255, 208, 0, 0.8), -12px 0 8px -4px rgba(255, 208, 0, 0.8);
     border-radius: 10px;
+    margin: 40px auto;
+  }
+
+  .cardLogin img {
+    width: 100px;
+    height: 100px;
   }
   /* .imgChange {
     width: 85px;
@@ -81,6 +87,7 @@
     color: white;
     background-color: black;
     border: 2px solid #FFFFFF;
+    transition: 0.5s all ease-out;
   }
   .btnSign {
     padding: 12px 5px;
@@ -96,6 +103,11 @@
     text-decoration: none;
   }
 
+  .btnLogin:hover{
+    background-color: #FFFFFF;
+    transform: scale(1);
+    color: black;
+  }
   /* .imgChange img {
     width: 100%;
     transition: 0.5s all ease-in-out;

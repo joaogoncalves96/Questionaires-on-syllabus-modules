@@ -16,8 +16,9 @@ function Login() {
       const username = inputRef1.current.value;
       const password = inputRef2.current.value;
 
-      const validUsername = database.users.find((user) => user.username === username)?.username;
-      const validPassword = database.users.find((user) => user.password === password)?.password;
+      const validUser = database.users.find((user) => user.username === username);
+      const validUsername = validUser?.username;
+      const validPassword = validUser?.password;
 
       if (username === "admin" && password === validPassword) {
          setSuccessLogin(true);
@@ -30,6 +31,8 @@ function Login() {
 
          setTimeout(() => Router.push("/home"), 700);
          return;
+      } else {
+         alert("Wrong Username or Password");
       }
 
       // console.log("username " + username);
@@ -48,6 +51,7 @@ function Login() {
    return (
       <div className={styles.cardLogin}>
          <h2 className={styles.text}>LOGIN</h2>
+         {/* <img src="https://icon-library.com/images/questionnaire-icon/questionnaire-icon-17.jpg" alt="" /> */}
          <form className={styles.form} onSubmit={handleSubmit}>
             <input className={styles.inputText} placeholder="Username" ref={inputRef1} name="admin"></input>
             <input
