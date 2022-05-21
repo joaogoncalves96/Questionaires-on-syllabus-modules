@@ -46,7 +46,7 @@ function AddQuestionsFormTrueOrFalse() {
             Categories
             {
                <select ref={categoriesareaRef} name="category">
-                  <option selected value="JavaScript">
+                  <option defaultValue="JavaScript">
                      JavaScript
                   </option>
                   <option value="React">React</option>
@@ -60,7 +60,7 @@ function AddQuestionsFormTrueOrFalse() {
          <label>
             Type
             <select ref={typeareaRef} name="type">
-               <option selected value="true-or-false">
+               <option defaultValue="true-or-false">
                   true-or-false
                </option>
             </select>
@@ -74,7 +74,7 @@ function AddQuestionsFormTrueOrFalse() {
             <textarea ref={answerareaRef} name="answers" />
             <select ref={trueorFalseareaRef} name="isCorrect">
                <option value="true">true</option>
-               <option selected value="false">
+               <option defaultValue="false">
                   false
                </option>
             </select>
@@ -84,7 +84,7 @@ function AddQuestionsFormTrueOrFalse() {
             <textarea ref={answerareaRef1} name="answers" />
             <select ref={trueorFalseareaRef1} name="isCorrect">
                <option value="true">true</option>
-               <option selected value="false">
+               <option defaultValue="false">
                   false
                </option>
             </select>
