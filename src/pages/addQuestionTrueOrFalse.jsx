@@ -1,14 +1,10 @@
 import Head from "next/head";
-import AddQuestionsFormSingle from "../components/AddQuestionsForm/AddQuestionsFormSingle";
+import AddQuestionsFormTrueOrFalse from "../components/AddQuestionsFormTrueOrFalse/AddQuestionsFormTrueOrFalse";
 
 function addQuestionTrueOrFalse() {
    return (
       <div>
-         <Head>
-            <title>HTML</title>
-         </Head>
-         {/* <h1>HTML</h1> */}
-         <AddQuestionsFormSingle />
+         <AddQuestionsFormTrueOrFalse />
       </div>
    );
 }

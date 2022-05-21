@@ -7,12 +7,10 @@ function SingleChoiceQuestion(props) {
    const [checked, setChecked] = useState(null);
    const [isCorrect, setIsCorrect] = useState("");
    const [isToggled, setIsToggled] = useState(false);
-   // const [points, setPoints] = useState(0);
 
    function onValueChange(e) {
       setChecked(e.target.value);
    }
-   // console.log(checked);
 
    function handleSubmit(e) {
       e.preventDefault();
@@ -20,7 +18,6 @@ function SingleChoiceQuestion(props) {
       const form = e.target;
       const inputs = Array.from(form.querySelectorAll("input"));
       const answers = inputs.map((input) => input.value);
-      // console.log(answers);
 
       for (let i = 0; i < answers.length; i++) {
          if (answers[i] === checked) {
@@ -41,20 +38,33 @@ function SingleChoiceQuestion(props) {
             {!isToggled &&
                possibleAnswers?.map((answer) => {
                   return (
-                     <div key={answer.id}>
-                        <input id={answer.id} type="radio" name="answer" value={answer} onChange={onValueChange} />
+                     <div key={answer.id} className={styles.answer}>
+                        <input
+                           id={answer.id}
+                           type="radio"
+                           name="answer"
+                           value={answer}
+                           onChange={onValueChange}
+                           required
+                        />
                         <label>{answer}</label>
                      </div>
                   );
                })}
          </div>
          {isToggled ? (
-            <div>
-               {isCorrect ? "CORRECT ✔️" : "INCORRECT ❌"}{" "}
-               <span>Correct answer is: {answer.map((answer) => answer.text)}</span>
+            <div className={styles.correctOrIncorrect}>
+               {isCorrect ? (
+                  <div className={styles.correct}>CORRECT ✔️👍</div>
+               ) : (
+                  <div className={styles.incorrect}>INCORRECT ❌👎</div>
+               )}{" "}
+               <div className={styles.correctAnswer}>Correct answer ➡️ {answer.map((answer) => answer.text)}</div>
             </div>
          ) : (
-            <button type="submit">Check</button>
+            <button type="submit" className={styles.buttonCheck}>
+               Check
+            </button>
          )}
       </form>
    );

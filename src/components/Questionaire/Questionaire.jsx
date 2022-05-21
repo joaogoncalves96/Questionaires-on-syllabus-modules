@@ -7,6 +7,7 @@ import styles from "./Questionaire.module.css";
 function Questionaire(props) {
    const { id, type } = props;
    const [questionsById, setQuestionsById] = useState([]);
+   const [questionaireTitle, setQuestionaireTitle] = useState("");
    const [answers, setAnswers] = useState([]);
    //    const [questionIndex, setQuestionIndex] = useState(0);
 
@@ -22,9 +23,9 @@ function Questionaire(props) {
          ]);
 
          setQuestionsById(questions.filter((question) => questionaire.questions.includes(question.id)));
-
+         const questionaireTitle = questionsById.title;
+         setQuestionaireTitle(questionaireTitle);
          console.log(questionsById);
-         //   console.log(question.type)
       }
       loadInformation();
    }, []);
@@ -40,9 +41,9 @@ function Questionaire(props) {
    }
 
    return (
-      <>
-         <div className={styles.questionaire}>Your current score is: {score}</div>
-
+      <div className={styles.questionaire}>
+         <h1 className={styles.questionaireTitle}>"Questionaire Title"</h1>
+         <div className={styles.score}>Your current score is: {score}</div>
          {questionsById.map((question) => {
             switch (question.type) {
                case "single-choice":
@@ -79,7 +80,14 @@ function Questionaire(props) {
                   return null;
             }
          })}
-      </>
+         <div className={styles.finalResults}>
+            <h2>Final Results</h2>
+            <h3>
+               {score} out of {questionsById.length} are correct ➡️ ({Math.round((score / questionsById.length) * 100)}
+               %)
+            </h3>
+         </div>
+      </div>
    );
 }
 export default Questionaire;

@@ -1,30 +1,20 @@
-import navStyles from "./Nav.module.css";
 import Link from "next/link";
+import styles from "./Nav.module.css";
 // import SingleChoiceQuestion from "../SingleChoiceQuestion/SingleChoiceQuestion";
 
 function Nav() {
    return (
-      <nav className={navStyles.nav}>
-         <ul>
-            <li>
-               <Link href="/javascript">JavaScript</Link>
-            </li>
-            <li>
-               <Link href="/html">HTML</Link>
-            </li>
-            <li>
-               <Link href="/css">CSS</Link>
-            </li>
-            <li>
-               <Link href="/react">React</Link>
-            </li>
-            <li>
-               <Link href="/">Home</Link>
-            </li>
-            <li>
-               <Link href="/addQuestion">Add a Question</Link>
-            </li>
-         </ul>
+      <nav className={styles.nav}>
+         <div className={styles.categories}>
+            <Link href="/javascript">JavaScript</Link>
+            <Link href="/html">HTML</Link>
+            <Link href="/css">CSS</Link>
+            <Link href="/react">React</Link>
+         </div>
+         <div className={styles.homeAndAddQuestion}>
+            <Link href="/">Home</Link>
+            <Link href="/addQuestion">Add a Question</Link>
+         </div>
       </nav>
    );
 }

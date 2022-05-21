@@ -1,12 +1,20 @@
-.title a, .title span {
-    color: #0070f3;
-    text-decoration: none;
+.headrer {
+    padding: 30px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* flex-direction: column; */
+    gap: 20px;
+
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-gap: 20px;
+.images {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-items: center;
+    gap: 40px;
+}
+.header img {
+    height: 80px;
+    width: 80px;
 }

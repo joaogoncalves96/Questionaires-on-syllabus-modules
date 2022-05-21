@@ -13,7 +13,7 @@ interface Questions {
     id: number;
     categories: string [];
     type: string;
-    questionTitle: string;
+    title: string;
     answers: {id: number, text: string, isCorrect: boolean} [];
     // posterId: number
     correctAnswers: string [];
