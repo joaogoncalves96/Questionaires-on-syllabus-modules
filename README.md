@@ -24,7 +24,7 @@ You can create an **account** and see you progress so you can improve your knowl
 
 ---
 
-### Scalabitlity
+### Can anyone add questions?
 The user with the **admin** permissions can easily add questions at any type and category with an UI (User Interface).
 
 ---
