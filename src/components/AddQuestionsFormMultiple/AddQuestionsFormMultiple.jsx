@@ -8,6 +8,7 @@ function AddQuestionsFormMultiple() {
    const questionareaRef = useRef(null);
    const formRef = useRef(null);
    const [answersCount, setAnswersCount] = useState(4);
+   //const a = answersCount.map((_) => <label key={_.i}></label>);
    //    const correctAnswerareaRef = useRef(null);
    //    const correctAnswerareaRef1 = useRef(null);
    const answerareaRef = useRef(null);
@@ -41,9 +42,10 @@ function AddQuestionsFormMultiple() {
       <form className={styles.container} ref={formRef} onSubmit={handleSubmit}>
          <label className={styles.categories}>
             Categories
+
             {
                <select ref={categoriesareaRef} name="category">
-                  <option selected value="JavaScript">
+                  <option defaultValue="JavaScript">
                      JavaScript
                   </option>
                   <option value="React">React</option>
@@ -57,7 +59,7 @@ function AddQuestionsFormMultiple() {
          <label className={styles.type}>
             Type
             <select ref={typeareaRef} name="type">
-               <option selected value="multiple-choice">
+               <option defaultValue="multiple-choice">
                   multiple-choice
                </option>
             </select>
@@ -67,18 +69,18 @@ function AddQuestionsFormMultiple() {
             <textarea ref={questionareaRef} name="title" />
          </label>
          {Array.from({ length: answersCount }).map((_, i) => (
+            <label key={i} className={styles.answer}>
             <div className="answer">
                <div className={styles.answer}>
-                  <label key={i}>
                      Answer
-                     <textarea ref={answerareaRef} name="answers" />
-                  </label>
+                     <textarea ref={answerareaRef} name="answers${i}" />
+                  </div>
                   <label>
                      Correct?
                      <input type="checkbox" name="correctAnswers" />
                   </label>
                </div>
-            </div>
+            </label>
          ))}
          <button type="submit" className={styles.addQuestionButton}>
             Add question
