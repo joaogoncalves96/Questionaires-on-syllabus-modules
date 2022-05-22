@@ -1,8 +1,79 @@
-.login {
-    background-color: #f5f5f5;
-    padding: 20px;
-    border-radius: 5px;
-    margin: 0 auto;
-    width: 300px;
-    height: 300px;
+.cardRegister {
+    width: 400px;
+    height: auto;
+    background-color: #000000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+    align-items: center;
+    box-shadow: 12px 0 15px -4px rgba(255, 208, 0, 0.8), -12px 0 8px -4px rgba(255, 208, 0, 0.8);
+    border-radius: 10px;
+    margin: 40px auto;
+}
+
+.text {
+    font-style: italic;
+    color: #FFFFFF;
+    margin: 40px 0px;
+  } 
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: auto;
+  }
+  
+  .inputText,
+  .inputPass {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px 0px;
+    border: none;
+    border-radius: 25px;
+    padding: 15px;
+    font-size: 15px;
+    outline: none;
+    text-align: center;
+  }
+  .inputText::-webkit-input-placeholder {
+    color: #8493A8;
+    font-size: 15px;
+  }
+  .inputPass::-webkit-input-placeholder {
+    color: #8493A8;
+    font-size: 15px;
+  }
+
+  .formActions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+.btnRegister{
+    width: 65%;
+    padding: 12px 0px;
+    margin: 25px 0px;
+    border: none;
+    border-radius: 25px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 15px;
+    cursor: pointer;
+    color: white;
+    background-color: black;
+    border: 2px solid #FFFFFF;
+    transition: 0.5s all ease-out;
+}
+
+.btnRegister:hover{
+    background-color: #FFFFFF;
+    transform: scale(1);
+    color: black;
 }

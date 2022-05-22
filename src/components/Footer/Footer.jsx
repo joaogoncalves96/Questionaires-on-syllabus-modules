@@ -3,15 +3,25 @@ import styles from "./Footer.module.css";
 function Footer() {
    return (
       <div className={styles.footer}>
-         <div className={styles.followUs}>Follow us on</div>
+         <div className={styles.followUs}>CHECK FOR MORE ON</div>
          <div className={styles.images}>
-            <img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" alt="" />
-            <img src="https://cdn-icons-png.flaticon.com/512/1384/1384065.png" alt="" />
-            <img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="" />
-            <img
-               src="https://cdn-icons.flaticon.com/png/512/3955/premium/3955011.png?token=exp=1653128433~hmac=9e19e060f51c67df8b0c9eb10ab1f577"
-               alt=""
-            />
+            <a target="_blank" href="https://mindswap-lms.vercel.app/syllabus/html">
+               <img src="https://cdn-icons-png.flaticon.com/512/174/174854.png" alt="html" />
+            </a>
+            <a target="_blank" href="https://mindswap-lms.vercel.app/syllabus/css">
+               <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" alt="css" />
+            </a>
+            <a target="_blank" href="https://mindswap-lms.vercel.app/syllabus/javascript">
+               {" "}
+               <img src="https://cdn-icons-png.flaticon.com/512/919/919828.png" alt="javascript" />
+            </a>
+            <a target="_blank" href="https://mindswap-lms.vercel.app/syllabus/react">
+               <img src="https://cdn-icons-png.flaticon.com/512/1048/1048877.png" alt="react" />
+            </a>
+
+            <a target="_blank" href="https://github.com/joaogoncalves96/Questionaires-on-syllabus-modules">
+               <img src="https://cdn-icons-png.flaticon.com/512/919/919847.png" alt="github" />
+            </a>
          </div>
       </div>
    );

@@ -1,5 +1,5 @@
 .container {
-    width: 100%;
+    width: 400px;
     height: auto;
     background-color: #000000;
     display: flex;
@@ -9,7 +9,7 @@
     align-items: center;
     box-shadow: 12px 0 15px -4px rgba(0, 119, 255, 0.8), -12px 0 8px -4px rgba(0, 119, 255, 0.8);
     border-radius: 10px;
-    margin: 20px 0px;
+    margin: 50px 0px;
 }
 
 .buttonAddQuestion {

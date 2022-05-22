@@ -1,0 +1,40 @@
+.collapsible{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button{
+    padding: 10px;
+    border: none;
+    border-radius: 15px;
+    outline: none;
+    text-transform: uppercase;
+    /* font-weight: 500; */
+    font-size: 15px;
+    cursor: pointer;
+    color: white;
+    background-color: rgba(31, 73, 125, 0.8);
+    border: 2px solid #FFFFFF;
+    transition: 0.5s all ease-out;
+    margin: 15px;
+    width: 75vh;
+}
+.button:hover {
+    background-color: rgba(0, 138, 192, 0.8);
+    transform: scale(1.1);
+}
+
+
+.header{
+  /* display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;*/
+  /* cursor: pointer; */
+  /* gap: 40px;  */
+}
+
+.content {
+    
+}

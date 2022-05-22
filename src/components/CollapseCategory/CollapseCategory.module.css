@@ -1,0 +1,44 @@
+.collapsible{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button{
+    padding: 10px;
+    border: none;
+    border-radius: 15px;
+    outline: none;
+    text-transform: uppercase;
+    /* font-weight: 500; */
+    font-size: 15px;
+    cursor: pointer;
+    color: white;
+    border: 2px solid #FFFFFF;
+    transition: 0.4s all ease-out;
+    margin: 20px;
+    width: 100vh;
+    height: 28vh;
+    /* transition: all .1s ease-in-out; */
+}
+.button:hover {
+    transform: translateY(-15px);
+    /* box-shadow: 0 2px 0 #006599; */
+}
+
+.button:active{
+    transform: (5px);
+}
+
+.header{
+  /* display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;*/
+  /* cursor: pointer; */
+  /* gap: 40px;  */
+}
+
+.content {
+    
+}

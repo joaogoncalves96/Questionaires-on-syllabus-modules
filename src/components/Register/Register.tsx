@@ -66,23 +66,46 @@ function Register(props: any) {
       return register;
    }
    return (
-      <form className={styles.register} onSubmit={handleSubmit}>
-         <label className={styles.label}>
-            Choose your username:
-            <input ref={usernameRef} name="username" />
-         </label>
-         <label className={styles.label}>
-            Choose your password:
-            <input ref={passwordRef} type="password" name="password" />
-         </label>
-         <label className={styles.label}>
-            Confirm your password:
-            <input ref={confirmPasswordRef} type="password" name="password" />
-         </label>
-         <button type="submit" /*onClick={() => checkUser(usernameRef.current.value) ? "Sucess" : "Unsucess"}*/>
-            Register{" "}
-         </button>
-      </form>
+      <div className={styles.cardRegister}>
+         <h2 className={styles.text}>REGISTER</h2>
+         <form className={styles.form} onSubmit={handleSubmit}>
+            <input
+               className={styles.inputText}
+               ref={usernameRef}
+               name="username"
+               placeholder="Choose your username"
+               required
+            />
+
+            <input
+               className={styles.inputPass}
+               ref={passwordRef}
+               type="password"
+               name="password"
+               placeholder="Choose your password"
+               required
+            />
+
+            <input
+               className={styles.inputPass}
+               ref={confirmPasswordRef}
+               type="password"
+               name="password"
+               placeholder="Confirm your password"
+               required
+            />
+            <div className={styles.formActions}>
+               <button
+                  type="submit"
+                  className={
+                     styles.btnRegister
+                  } /*onClick={() => checkUser(usernameRef.current.value) ? "Sucess" : "Unsucess"}*/
+               >
+                  Register{" "}
+               </button>
+            </div>
+         </form>
+      </div>
    );
 }
 export default Register;

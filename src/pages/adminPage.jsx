@@ -1,10 +1,13 @@
 import AddAllQuestionsForm from "../components/AddAllQuestionsForm/AddAllQuestionsForm";
+import Collapse from "../components/Collapse/Collapse";
 
-function addQuestion() {
+function adminPage() {
    return (
-      <div>
-         <AddAllQuestionsForm />
-      </div>
+      <>
+         <Collapse title="ADD QUESTIONS" closeButtonTitle="CLOSE">
+            <AddAllQuestionsForm />
+         </Collapse>
+      </>
    );
 }
-export default addQuestion;
+export default adminPage;

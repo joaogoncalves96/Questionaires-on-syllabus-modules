@@ -20,6 +20,7 @@ function AddQuestionsFormSingle() {
 
    async function handleSubmit(e) {
       e.preventDefault();
+      alert("Question added ➕");
 
       const response = await fetch(`http://localhost:3000/api/questions`, {
          method: "POST",
@@ -63,12 +64,13 @@ function AddQuestionsFormSingle() {
    }
 
    return (
-      <form onSubmit={handleSubmit}>
-         <label>
+      <form onSubmit={handleSubmit} className={styles.container}>
+         <h1 className={styles.questionTitle}>Single - Choice Question</h1>
+         <label className={styles.categories}>
             Categories
             {
-               <select ref={categoriesareaRef} name="category">
-                  <option defaultValue="JavaScript">
+               <select ref={categoriesareaRef} name="category" required>
+                  <option defaultValue value="JavaScript">
                      JavaScript
                   </option>
                   <option value="React">React</option>
@@ -77,61 +79,53 @@ function AddQuestionsFormSingle() {
                </select>
             }
             {/* <textarea ref={categoriesareaRef} name="categoriesTitle" /> */}
-            <textarea ref={secundaryareaRef} name="secundaryTitle" />
+            <textarea ref={secundaryareaRef} name="secundaryTitle" placeholder="sub-category" required />
          </label>
-         <label>
+         <label className={styles.type}>
             Type
             <select ref={typeareaRef} name="type">
-               <option defaultValue="single-choice">
-                  single-choice
+               <option defaultValue value="single-choice">
+                  Single-choice
                </option>
             </select>
          </label>
-         <label>
-            question
-            <textarea ref={questionareaRef} name="title" />
+         <label className={styles.question}>
+            Question:
+            <textarea ref={questionareaRef} name="title" required />
          </label>
-         <label>
-            answer
-            <textarea ref={answerareaRef} name="answers" />
+         <div className={styles.answers}>
+            <textarea ref={answerareaRef} name="answers" placeholder="Answer" required />
             <select ref={trueorFalseareaRef} name="isCorrect">
-               <option value="true">true</option>
-               <option defaultValue="false">
-                  false
+               <option value="true">True</option>
+               <option defaultValue value="false">
+                  False
                </option>
             </select>
-         </label>
-         <label>
-            answers
-            <textarea ref={answerareaRef1} name="answers" />
+            <textarea ref={answerareaRef1} name="answers" placeholder="Answer" required />
             <select ref={trueorFalseareaRef1} name="isCorrect">
-               <option value="true">true</option>
-               <option defaultValue="false">
-                  false
+               <option value="true">True</option>
+               <option defaultValue value="false">
+                  False
                </option>
             </select>
-         </label>
-         <label>
-            answers
-            <textarea ref={answerareaRef2} name="answers" />
+            <textarea ref={answerareaRef2} name="answers" placeholder="Answer" required />
             <select ref={trueorFalseareaRef2} name="isCorrect">
-               <option value="true">true</option>
-               <option defaultValue="false">
-                  false
+               <option value="true">True</option>
+               <option defaultValue value="false">
+                  False
                </option>
             </select>
-         </label>
-         <label>
-            answers
-            <textarea ref={answerareaRef3} name="answers" />
+            <textarea ref={answerareaRef3} name="answers" placeholder="Answer" required />
             <select ref={trueorFalseareaRef3} name="isCorrect">
-               <option value="true">true</option>
-               <option defaultValue="false">
-                  false
+               <option value="true">True</option>
+               <option defaultValue value="false">
+                  False
                </option>
             </select>
-         </label>
-         <button type="submit">Add question</button>
+         </div>
+         <button type="submit" className={styles.addQuestionButton}>
+            Add question
+         </button>
       </form>
    );
 }

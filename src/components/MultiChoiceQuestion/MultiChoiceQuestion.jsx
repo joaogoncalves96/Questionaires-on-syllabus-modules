@@ -7,12 +7,11 @@ function MultiChoiceQuestion(props) {
    const [checked, setChecked] = useState(null);
    const [isCorrect, setIsCorrect] = useState("");
    const [isToggled, setIsToggled] = useState(false);
-   const [points, setPoints] = useState(0);
+   // const [points, setPoints] = useState(0);
 
    function onValueChange(e) {
       setChecked(e.target.value);
    }
-   // console.log(checked);
 
    function handleSubmit(e) {
       e.preventDefault();
@@ -24,7 +23,6 @@ function MultiChoiceQuestion(props) {
       });
 
       const selectedAnswers = answers.filter((answer) => answer.checked === true);
-      // console.log(selectedAnswers);
 
       for (let i = 0; i < correctAnswers.length; i++) {
          if (selectedAnswers.length !== correctAnswers.length) {
@@ -37,7 +35,6 @@ function MultiChoiceQuestion(props) {
             return;
          } else {
             setIsCorrect(false);
-
             return;
          }
       }

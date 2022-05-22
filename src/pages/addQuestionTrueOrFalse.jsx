@@ -1,4 +1,3 @@
-import Head from "next/head";
 import AddQuestionsFormTrueOrFalse from "../components/AddQuestionsFormTrueOrFalse/AddQuestionsFormTrueOrFalse";
 
 function addQuestionTrueOrFalse() {

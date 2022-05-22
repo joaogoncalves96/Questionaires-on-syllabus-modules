@@ -13,6 +13,12 @@
 }
 
 .footer img {
-    height: 30px;
-    width: 30px;
+    height: 40px;
+    width: 40px;
+    transition: 0.2s all ease-out;
+}
+
+.footer img:hover{
+    cursor: pointer;
+    transform: scale(1.3);
 }

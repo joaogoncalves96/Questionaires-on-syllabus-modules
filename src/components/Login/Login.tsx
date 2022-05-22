@@ -4,7 +4,6 @@ import database from "../../../database.json";
 import styles from "./Login.module.css";
 function Login() {
    const [successLogin, setSuccessLogin] = useState(false);
-   const [loading, setLoading] = useState(false);
 
    const inputRef1 = useRef<HTMLInputElement>(null);
    const inputRef2 = useRef<HTMLInputElement>(null);
@@ -32,7 +31,7 @@ function Login() {
          setTimeout(() => Router.push("/home"), 700);
          return;
       } else {
-         alert("Wrong Username or Password");
+         alert("Wrong Username or Password ❌❌");
       }
 
       // console.log("username " + username);
@@ -51,26 +50,26 @@ function Login() {
    return (
       <div className={styles.cardLogin}>
          <h2 className={styles.text}>LOGIN</h2>
-         {/* <img src="https://icon-library.com/images/questionnaire-icon/questionnaire-icon-17.jpg" alt="" /> */}
          <form className={styles.form} onSubmit={handleSubmit}>
-            <input className={styles.inputText} placeholder="Username" ref={inputRef1} name="admin"></input>
+            <input className={styles.inputText} placeholder="Username" ref={inputRef1} name="admin" required></input>
             <input
                className={styles.inputPass}
                placeholder="Password"
                ref={inputRef2}
                name="password"
                type="password"
+               required
             ></input>
             <div className={styles.formActions}>
-               <button className={styles.btnLogin} type="submit" disabled={loading}>
-                  {loading ? "Loading..." : "Log in"}
+               <button className={styles.btnLogin} type="submit">
+                  Log in
                </button>
                <a className={styles.btnSign} href="/signup">
                   {" "}
                   Don't have an account?
                </a>
             </div>
-            {successLogin && <h3 className={styles.loginSucess}>Login Sucess! 🎆</h3>}
+            {successLogin && alert("Login success!✔️")}
          </form>
       </div>
    );
