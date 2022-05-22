@@ -7,7 +7,7 @@ function Homepage() {
    return (
       <>
          <article>
-            <h1>QUESTIONAIRES</h1>
+            <h1 aria-label="questionaires"></h1>
          </article>
          <CollapseCategory photo_icon="https://arquivo.devmedia.com.br/noticias/artigos/artigo_javascript-reduce-reduzindo-uma-colecao-em-um-unico-objeto_37981.jpg">
             <Collapse title="Questionaire 1" closeButtonTitle="Close">

@@ -1,8 +1,7 @@
 {
    "users": [
       { "id": 1, "username": "admin", "password": "123", "questionsAnswered": [{ "id": 1, "answer": "%" }] },
-      { "id": 2, "username": "user", "password": "321", "questionsAnswered": [{ "id": 1, "answer": "%" }] },
-      { "id": 3, "username": "", "password": "" }
+      { "id": 2, "username": "user", "password": "321", "questionsAnswered": [{ "id": 1, "answer": "%" }] }
    ],
    "questionaires": [
       { "id": 1, "name": "CSS Syntax and Selectors Edition", "questions": [1, 2, 3, 4, 10] },

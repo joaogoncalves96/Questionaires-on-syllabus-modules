@@ -68,11 +68,11 @@ function AddQuestionsFormMultiple() {
                <div className="answer">
                   <div className={styles.answer}>
                      <textarea ref={answerareaRef} name="answers${i}" placeholder="Answer" required />
+                     <label>
+                        Correct?
+                        <input type="checkbox" name="correctAnswers" />
+                     </label>
                   </div>
-                  <label>
-                     Correct?
-                     <input type="checkbox" name="correctAnswers" />
-                  </label>
                </div>
             </label>
          ))}
