@@ -8,6 +8,7 @@ function AddQuestionsFormMultiple() {
    const questionareaRef = useRef(null);
    const formRef = useRef(null);
    const [answersCount, setAnswersCount] = useState(4);
+   //const a = answersCount.map((_) => <label key={_.i}></label>);
    //    const correctAnswerareaRef = useRef(null);
    //    const correctAnswerareaRef1 = useRef(null);
    const answerareaRef = useRef(null);

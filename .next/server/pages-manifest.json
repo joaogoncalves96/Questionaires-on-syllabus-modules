@@ -1,6 +1,11 @@
 {
   "/_app": "pages/_app.js",
   "/_document": "pages/_document.js",
+<<<<<<< HEAD
   "/_error": "pages/_error.js",
   "/signup": "pages/signup.js"
+=======
+  "/addQuestionTrueOrFalse": "pages/addQuestionTrueOrFalse.js",
+  "/adminPage": "pages/adminPage.js"
+>>>>>>> f7052e062dc841d58c87d9351ffba959ef57ab75
 }
