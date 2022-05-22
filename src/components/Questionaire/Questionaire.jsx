@@ -5,15 +5,15 @@ import TrueOrFalseQuestion from "../TrueOrFalseQuestion/TrueOrFalseQuestion";
 import styles from "./Questionaire.module.css";
 
 function Questionaire(props) {
-   const { id, type } = props;
+   const { id, titleButton } = props;
    const [questionsById, setQuestionsById] = useState([]);
    const [questionaireTitle, setQuestionaireTitle] = useState("");
    const [answers, setAnswers] = useState([]);
-   //    const [questionIndex, setQuestionIndex] = useState(0);
+   const [questionIndex, setQuestionIndex] = useState(0);
+   const [questionTitle, setQuestionTitle] = useState("");
+   const [questionCategory, setQuestionCategory] = useState("");
 
    const [score, setScore] = useState(0);
-   //    const [showFinalResult, setShowFinalResult] = useState(false);
-   //    const [questionTitle, setQuestionTitle] = useState("");
 
    useEffect(() => {
       async function loadInformation() {
@@ -23,18 +23,15 @@ function Questionaire(props) {
          ]);
 
          setQuestionsById(questions.filter((question) => questionaire.questions.includes(question.id)));
-         const questionaireTitle = questionsById.title;
-         setQuestionaireTitle(questionaireTitle);
-         console.log(questionsById);
+         setQuestionaireTitle(questionaire.name);
+         // setQuestionCategory(questions.map((category) => category.categories).join(", "));
+
+         // setQuestionaireTitle(questionaireTitle);
+         // console.log(questionsById);
+         console.log(questions.categories);
       }
       loadInformation();
    }, []);
-
-   //    if (questionIndex + 1 < questions.length) {
-   //      setQuestionIndex(questionIndex + 1);
-   //    } else {
-   //      setShowFinalResult(true);
-   //    }
 
    function getPoints(pointsToAdd) {
       setScore(score + pointsToAdd);
@@ -42,39 +39,48 @@ function Questionaire(props) {
 
    return (
       <div className={styles.questionaire}>
-         <h1 className={styles.questionaireTitle}>"Questionaire Title"</h1>
-         <div className={styles.score}>Your current score is: {score}</div>
+         <h1 className={styles.questionaireTitle}>{questionaireTitle}</h1>
+         {/* <h3>{}</h3> */}
          {questionsById.map((question) => {
             switch (question.type) {
                case "single-choice":
                   return (
-                     <SingleChoiceQuestion
-                        key={question.id}
-                        title={question.title}
-                        possibleAnswers={question.answers.map((answer) => answer.text)}
-                        answer={question.answers.filter((answer) => answer.isCorrect)}
-                        score={getPoints}
-                     />
+                     <>
+                        <SingleChoiceQuestion
+                           key={question.id}
+                           title={question.title}
+                           possibleAnswers={question.answers.map((answer) => answer.text)}
+                           answer={question.answers.filter((answer) => answer.isCorrect)}
+                           score={getPoints}
+                        />
+                        <div className={styles.score}>Current Score: {score}</div>
+                     </>
                   );
                case "multiple-choice":
                   return (
-                     <MultiChoiceQuestion
-                        key={question.id}
-                        title={question.title}
-                        possibleAnswers={question.answers}
-                        correctAnswers={question.correctAnswers}
-                        score={getPoints}
-                     />
+                     <>
+                        <MultiChoiceQuestion
+                           key={question.id}
+                           title={question.title}
+                           possibleAnswers={question.answers}
+                           correctAnswers={question.correctAnswers}
+                           score={getPoints}
+                        />
+                        <div className={styles.score}>Current Score: {score}</div>
+                     </>
                   );
                case "true-or-false":
                   return (
-                     <TrueOrFalseQuestion
-                        key={question.id}
-                        title={question.title}
-                        possibleAnswers={question.answers.map((answer) => answer.text)}
-                        answer={question.answers.filter((answer) => answer.isCorrect)}
-                        score={getPoints}
-                     />
+                     <>
+                        <TrueOrFalseQuestion
+                           key={question.id}
+                           title={question.title}
+                           possibleAnswers={question.answers.map((answer) => answer.text)}
+                           answer={question.answers.filter((answer) => answer.isCorrect)}
+                           score={getPoints}
+                        />
+                        <div className={styles.score}>Current Score: {score}</div>
+                     </>
                   );
                default:
                   return null;
@@ -83,7 +89,7 @@ function Questionaire(props) {
          <div className={styles.finalResults}>
             <h2>Final Results</h2>
             <h3>
-               {score} out of {questionsById.length} are correct ➡️ ({Math.round((score / questionsById.length) * 100)}
+               {score} of {questionsById.length} are correct ➡️ ({Math.round((score / questionsById.length) * 100)}
                %)
             </h3>
          </div>

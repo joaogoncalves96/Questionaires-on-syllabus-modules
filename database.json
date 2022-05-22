@@ -2,41 +2,41 @@
    "users": [
       { "id": 1, "username": "admin", "password": "123", "questionsAnswered": [{ "id": 1, "answer": "%" }] },
       { "id": 2, "username": "user", "password": "321", "questionsAnswered": [{ "id": 1, "answer": "%" }] },
-      { "id": 3, "username": "12233333", "password": "111" },
-      { "id": 4, "username": "111", "password": "111" },
-      { "id": 5, "username": "2", "password": "3" },
-      { "id": 6, "username": "teste", "password": "3" },
-      { "id": 7, "username": "teste", "password": "3" },
-      { "id": 8, "username": "teste", "password": "2" },
-      { "id": 9, "username": "teste", "password": "2" },
-      { "id": 10, "username": "111", "password": "222" },
-      { "id": 11, "username": "456", "password": "1" },
-      { "id": 12, "username": "manel3", "password": "22" },
-      { "id": 13, "username": "manel", "password": "0" }
+      { "id": 3, "username": "", "password": "" }
    ],
    "questionaires": [
-      { "id": 1, "name": "CSS Selectors Complete Edition", "questions": [1, 3] },
-      { "id": 2, "name": "CSS Selectors for Dummies", "questions": [1, 2, 3, 4, 5, 6, 7] },
-      { "id": 3, "name": "javaScript bascis", "questions": [3] },
-      { "id": 4, "name": "javaScript advanced", "questions": [6] },
-      { "id": 5, "name": "javaScript OOP", "questions": [7] }
+      { "id": 1, "name": "CSS Syntax and Selectors Edition", "questions": [1, 2, 3, 4, 10] },
+      { "id": 2, "name": "CSS Visual Edition", "questions": [6, 7, 8, 9] },
+      { "id": 3, "name": "CSS Box Model", "questions": [11, 12, 13, 14, 15] },
+      { "id": 4, "name": "CSS Typography", "questions": [16, 17, 18, 19, 20] },
+      { "id": 5, "name": "HTML Introduction and Tables", "questions": [21, 22, 23, 24, 25, 26, 27, 28] },
+      { "id": 6, "name": "HTML Forms", "questions": [28, 29, 30, 31, 32, 33] },
+      { "id": 7, "name": "HTML Semantic", "questions": [34, 35, 36, 37, 37] },
+      { "id": 8, "name": "JavaScript Introduction", "questions": [38, 39, 40, 41, 42] },
+      { "id": 9, "name": "JavaScript Functions", "questions": [42, 43, 44, 45, 46, 47] },
+      { "id": 10, "name": "JavaScript Arrays", "questions": [48, 49, 50, 51] },
+      { "id": 11, "name": "JavaScript Objects", "questions": [52, 53, 54, 55] },
+      { "id": 12, "name": "React JSX", "questions": [56, 57, 58, 59, 60] },
+      { "id": 13, "name": "React Components", "questions": [61, 62, 63, 64, 65] },
+      { "id": 14, "name": "React Components Interacting", "questions": [66, 67, 68, 69, 70] },
+      { "id": 15, "name": "React Hooks", "questions": [71, 72, 73, 74] }
    ],
    "questions": [
       {
          "id": 1,
-         "categories": ["css", "css-selectors"],
+         "categories": ["css", "Syntax and Selectors"],
          "type": "single-choice",
-         "title": "Which of the following symbols is not selector combinator?",
+         "title": "What does the <style> HTML tag allow?",
          "answers": [
-            { "id": 0, "text": ">", "isCorrect": true },
-            { "id": 1, "text": "%", "isCorrect": false },
-            { "id": 2, "text": "+", "isCorrect": false },
-            { "id": 3, "text": "~", "isCorrect": false }
+            { "id": 0, "text": "It automatically adds common styles to your webpage", "isCorrect": false },
+            { "id": 1, "text": "It is the only way to apply styles inside an HTML file.", "isCorrect": false },
+            { "id": 2, "text": "It links external CSS files to the HTML document", "isCorrect": false },
+            { "id": 3, "text": "Writing one or more CSS rules in CSS syntax inside an HTML file", "isCorrect": true }
          ]
       },
       {
          "id": 2,
-         "categories": ["css"],
+         "categories": ["css", "Syntax and Selectors"],
          "type": "single-choice",
          "title": "What does CSS stand for?",
          "answers": [
@@ -48,319 +48,959 @@
       },
       {
          "id": 3,
-         "categories": ["css", "css-selectors"],
-         "type": "multiple-choice",
-         "title": "Section.awesome { border: 1px solid hotpink; }?",
-         "answers": ["answer1", "answer2", "answer3", "answer4", "answer5"],
-         "correctAnswers": ["answer1 ", " answer2"]
+         "categories": ["css", "Syntax and Selectors"],
+         "type": "single-choice",
+         "title": "Separating HTML and CSS into their own files helps accomplish which of the following?",
+         "answers": [
+            { "id": 0, "text": "More specific CSS selectors", "isCorrect": false },
+            { "id": 1, "text": "Better-looking CSS styles", "isCorrect": false },
+            {
+               "id": 2,
+               "text": "Separating HTML structure from CSS style makes the code in both languages easier to read and maintain",
+               "isCorrect": true
+            },
+            { "id": 3, "text": "Enhances webpage load time", "isCorrect": false }
+         ]
       },
       {
          "id": 4,
-         "categories": ["css", "css-selectors"],
-         "type": "multiple-choice",
-         "title": "Section.awesome { border: 1px solid hotpink; }?",
-         "answers": ["answer1", "answer2", "answer3", "answer4"],
-         "correctAnswers": ["answer3", "answer4"]
+         "categories": ["css", "Syntax and Selectors"],
+         "type": "single-choice",
+         "title": "IDs are more specific than classes and tags?",
+         "answers": [
+            { "id": 0, "text": "True", "isCorrect": true },
+            { "id": 1, "text": "False", "isCorrect": false }
+         ]
       },
       {
          "id": 5,
-         "categories": ["javascript", "javascript-basics"],
-         "type": "multiple-choice",
-         "title": "What is the correct syntax for referring to an external script called 'xxx.js'?",
-         "answers": ["answ1", "answ2", "answ3", "answ4", "answ5", "answ6"],
-         "correctAnswers": ["answ2", "answ5"]
+         "categories": ["css", "Syntax and Selectors"],
+         "type": "single-choice",
+         "title": "What is the purpose of the HTML <link> tag when it comes to styling a page?",
+         "answers": [
+            { "id": 0, "text": "To make sure that your inline styles are applied correctly.", "isCorrect": false },
+            { "id": 1, "text": "To determine the specificity of CSS rules.", "isCorrect": false },
+            { "id": 2, "text": "To make sure that all links are styled correctly on the page", "isCorrect": false },
+            {
+               "id": 3,
+               "text": "To link a specific stylesheet file to an HTML file so that the styles get applied on the page",
+               "isCorrect": true
+            }
+         ]
       },
       {
          "id": 6,
-         "categories": ["javascript", "javascript-advanced"],
+         "categories": ["css", "Visual"],
          "type": "single-choice",
-         "title": "What is Promises?",
+         "title": "How would you make an <h1> element invisible on the page?",
          "answers": [
-            { "id": 0, "text": "Prom...", "isCorrect": false },
-            { "id": 1, "text": "Promise to do something", "isCorrect": true },
-            { "id": 2, "text": "Response...", "isCorrect": false },
-            { "id": 3, "text": "Requeste", "isCorrect": false }
+            { "id": 0, "text": "opacity: 1", "isCorrect": false },
+            { "id": 1, "text": "opacity: 0", "isCorrect": true },
+            { "id": 2, "text": "transparent: true", "isCorrect": false },
+            { "id": 3, "text": "opacity: transparent", "isCorrect": false }
          ]
       },
       {
          "id": 7,
-         "categories": ["JavaScript", "Whats is js?"],
-         "type": "single-choice",
-         "questionTitle": "1",
+         "categories": ["css", "Visual"],
+         "type": "multiple-choice",
+         "title": "What doesn't the Font-family property control?",
          "answers": [
-            { "id": 1, "text": "2", "isCorrect": false },
-            { "id": 2, "text": "3", "isCorrect": false },
-            { "id": 3, "text": "4", "isCorrect": false },
-            { "id": 4, "text": "4", "isCorrect": false }
+            "It allows you to group all the fonts you use in your stylesheet into a family.",
+            "It defines and creates a new font.",
+            "The typeface used by the element."
          ],
-         "createdAt": 1652993520563
+         "correctAnswers": [
+            "It allows you to group all the fonts you use in your stylesheet into a family.",
+            "It defines and creates a new font."
+         ]
       },
       {
          "id": 8,
-         "categories": ["JavaScript", "Whats is jssss ?"],
+         "categories": ["css", "Visual"],
          "type": "single-choice",
+         "title": "The font-weight property will adjust which of the following?",
          "answers": [
-            { "id": 1, "text": "2dd", "isCorrect": false },
-            { "id": 2, "text": "ddd", "isCorrect": false },
-            { "id": 3, "text": "4ff", "isCorrect": false },
-            { "id": 4, "text": "4ff", "isCorrect": false }
-         ],
-         "createdAt": 1652993636718
+            { "id": 0, "text": "How thin or thick text appears.", "isCorrect": true },
+            { "id": 1, "text": "How transparent text appears.", "isCorrect": false },
+            { "id": 2, "text": "How small or large text appears", "isCorrect": false },
+            { "id": 3, "text": "The spacing between letters", "isCorrect": false }
+         ]
       },
       {
          "id": 9,
-         "categories": ["JavaScript", "Whats is jssss ?"],
+         "categories": ["css", "Visual"],
          "type": "single-choice",
-         "title": "1ss",
+         "title": "Which of the following will set an element's background to an image?",
          "answers": [
-            { "id": 1, "text": "2dd", "isCorrect": false },
-            { "id": 2, "text": "ddd", "isCorrect": false },
-            { "id": 3, "text": "4ff", "isCorrect": false },
-            { "id": 4, "text": "4ff", "isCorrect": false }
-         ],
-         "createdAt": 1652993733707
-      },
-      {
-         "id": 7,
-         "categories": ["JavaScript", "Whats is js?"],
-         "type": "true-or-false",
-         "title": "1",
-         "answers": [
-            { "id": 1, "text": "True", "isCorrect": true },
-            { "id": 2, "text": "False", "isCorrect": false }
-         ],
-         "createdAt": 1652993520563
-      },
-      {
-         "id": 8,
-         "categories": ["JavaScript", "12344444444"],
-         "type": "multiple-choice",
-         "title": "multi-choiceeeeee ???",
-         "answers": ["edvds", "sdgsbs", "shgsbr", "srhbrsx"],
-         "correctAnswers": [["edvds", "sdgsbs"]],
-         "createdAt": 1653040513461
-      },
-      {
-         "id": 9,
-         "categories": ["JavaScript", "12344444444egwad"],
-         "type": "multiple-choice",
-         "title": "multi-chesgwedoiceeeeee ???",
-         "answers": ["edvdsesgrsg", "sdgsbsw4gsr", "wers", "srhbrsx"],
-         "correctAnswers": ["edvdsesgrsg", "sdgsbsw4gsr"],
-         "createdAt": 1653040580384
+            { "id": 0, "text": "background-image: url  = “image.jpg”;", "isCorrect": false },
+            { "id": 1, "text": "background-image: url(“image.jpg”);", "isCorrect": true },
+            { "id": 2, "text": "background-image: “image.jpg”;", "isCorrect": false },
+            { "id": 3, "text": "background.image = url(“image.jpg”);", "isCorrect": false }
+         ]
       },
       {
          "id": 10,
-         "categories": ["JavaScript", "ewdrvf"],
+         "categories": ["css", "Syntax and Selectors"],
          "type": "multiple-choice",
-         "title": "egewsdfv",
-         "answers": [],
-         "correctAnswers": [],
-         "createdAt": 1653048273924
+         "title": "Select the correct CSS declarations",
+         "answers": ["color: green;", "font.size: 20px;", "text-align: center;", "border-radius = 5px;"],
+         "correctAnswers": ["color: green;", "text-align: center;"]
       },
       {
          "id": 11,
-         "categories": ["JavaScript", "11111"],
-         "type": "multiple-choice",
-         "title": "33333",
-         "answers": [],
-         "correctAnswers": [],
-         "createdAt": 1653048505458
+         "categories": ["css", "Box Model"],
+         "type": "single-choice",
+         "title": "What property affects the space between the border of an element and its surrounding elements?",
+         "answers": [
+            { "id": 0, "text": "Border.", "isCorrect": false },
+            { "id": 1, "text": "Margin.", "isCorrect": true },
+            { "id": 2, "text": "Overflow.", "isCorrect": false },
+            { "id": 3, "text": "Padding.", "isCorrect": false }
+         ]
       },
       {
          "id": 12,
-         "categories": ["JavaScript", "111"],
+         "categories": ["css", "Box Model"],
          "type": "single-choice",
-         "title": "111",
+         "title": "Choose the one that will set the vertical padding to 20 pixels and horizontal padding to 40 pixels.",
          "answers": [
-            { "id": 1, "text": "222", "isCorrect": false },
-            { "id": 2, "text": "222", "isCorrect": false },
-            { "id": 3, "text": "222", "isCorrect": false },
-            { "id": 4, "text": "222", "isCorrect": false }
-         ],
-         "createdAt": 1653048608912
+            { "id": 0, "text": "padding: 40px 20px.", "isCorrect": false },
+            { "id": 1, "text": "padding: 20px 20px 40px 40px.", "isCorrect": false },
+            { "id": 2, "text": "padding: 20px 40px 40px 20px.", "isCorrect": false },
+            { "id": 3, "text": "padding: 20px 40px", "isCorrect": true }
+         ]
       },
       {
          "id": 13,
-         "categories": ["JavaScript", "222"],
-         "type": "true-or-false",
-         "title": "111",
+         "categories": ["css", "Box Model"],
+         "type": "single-choice",
+         "title": "Which is not part of the CSS box model?",
          "answers": [
-            { "id": 1, "text": "222", "isCorrect": false },
-            { "id": 2, "text": "333", "isCorrect": false }
-         ],
-         "createdAt": 1653048691462
+            { "id": 0, "text": "Padding", "isCorrect": false },
+            { "id": 1, "text": "div", "isCorrect": true },
+            { "id": 2, "text": "Margin", "isCorrect": false },
+            { "id": 3, "text": "Border", "isCorrect": false }
+         ]
       },
       {
          "id": 14,
-         "categories": ["JavaScript", "dsvgdzv"],
+         "categories": ["css", "Box Model"],
          "type": "single-choice",
-         "title": "srbgfdfb",
+         "title": "Wich property controls how to display content that is too large for its container?",
          "answers": [
-            { "id": 1, "text": "sdg", "isCorrect": false },
-            { "id": 2, "text": "sbd", "isCorrect": false },
-            { "id": 3, "text": "db", "isCorrect": false },
-            { "id": 4, "text": "dds", "isCorrect": false }
-         ],
-         "createdAt": 1653055870425
+            { "id": 0, "text": "margin", "isCorrect": false },
+            { "id": 1, "text": "padding", "isCorrect": false },
+            { "id": 2, "text": "overflow", "isCorrect": true },
+            { "id": 3, "text": "size", "isCorrect": false }
+         ]
       },
       {
          "id": 15,
-         "categories": ["JavaScript", "wfsea"],
-         "type": "true-or-false",
-         "title": "efwda",
-         "answers": [
-            { "id": 1, "text": "", "isCorrect": false },
-            { "id": 2, "text": "", "isCorrect": false }
-         ],
-         "createdAt": 1653056111786
+         "categories": ["css", "Box Model"],
+         "type": "multiple-choice",
+         "title": "Choose between the following CSS properties, who controls the size of an element's content",
+         "answers": ["border", "width", "height", "padding"],
+         "correctAnswers": ["height", "padding"]
       },
       {
          "id": 16,
-         "categories": ["JavaScript", "rgvesfd"],
+         "categories": ["css", "Typography"],
          "type": "single-choice",
-         "title": "rrrrrr",
+         "title": "How letter-spacing:20 px will affect <h1> elements in CSS?",
          "answers": [
-            { "id": 1, "text": "ggggr", "isCorrect": true },
-            { "id": 2, "text": "rrgrd", "isCorrect": false },
-            { "id": 3, "text": "gfds", "isCorrect": false },
-            { "id": 4, "text": "rgrsfg", "isCorrect": false }
-         ],
-         "createdAt": 1653056812249
+            {
+               "id": 0,
+               "text": "There will be 20 pixels of space between different <h1> elements.",
+               "isCorrect": false
+            },
+            { "id": 1, "text": "Words will have 20 pixels of feedback between them.", "isCorrect": false },
+            { "id": 2, "text": "None, letter-spacing is an inalid CSS property.", "isCorrect": false },
+            { "id": 3, "text": "<h1> elements will have 20 pixels of space between every letter.", "isCorrect": true }
+         ]
       },
       {
          "id": 17,
-         "categories": ["JavaScript", "rgvesfd"],
+         "categories": ["css", "Typography"],
          "type": "single-choice",
-         "title": "rrrrrr",
+         "title": "What is the purpose of the HTML <link> tag when it comes to styling a page?",
          "answers": [
-            { "id": 1, "text": "ggggr", "isCorrect": false },
-            { "id": 2, "text": "rrgrd", "isCorrect": false },
-            { "id": 3, "text": "gfds", "isCorrect": true },
-            { "id": 4, "text": "rgrsfg", "isCorrect": false }
-         ],
-         "createdAt": 1653056868216
+            { "id": 0, "text": "To make sure that your inline styles are applied correctly.", "isCorrect": false },
+            { "id": 1, "text": "To determine the specificity of CSS rules.", "isCorrect": false },
+            { "id": 2, "text": "To make sure that all links are styled correctly on the page", "isCorrect": false },
+            {
+               "id": 3,
+               "text": "To link a specific stylesheet file to an HTML file so that the styles get applied on the page",
+               "isCorrect": true
+            }
+         ]
       },
       {
          "id": 18,
-         "categories": ["JavaScript", "dvaevasedc"],
-         "type": "true-or-false",
-         "title": "fgvedv",
+         "categories": ["css", "Typography"],
+         "type": "single-choice",
+         "title": "Which rule will make all <h1> text uppercase?",
          "answers": [
-            { "id": 1, "text": "asfwcdf", "isCorrect": true },
-            { "id": 2, "text": "fedacaw", "isCorrect": true }
-         ],
-         "createdAt": 1653056978347
+            { "id": 0, "text": "text-style: uppercase;", "isCorrect": false },
+            { "id": 1, "text": "text-transform: uppercase;", "isCorrect": true },
+            { "id": 2, "text": "text-case: upper;", "isCorrect": false },
+            { "id": 3, "text": "text: uppercase;", "isCorrect": false }
+         ]
       },
       {
          "id": 19,
-         "categories": ["JavaScript", "dvaevasedc"],
-         "type": "true-or-false",
-         "title": "fgvedv",
+         "categories": ["css", "Typography"],
+         "type": "single-choice",
+         "title": "What is the purpose of the HTML <link> tag when it comes to styling a page?",
          "answers": [
-            { "id": 1, "text": "asfwcdf", "isCorrect": true },
-            { "id": 2, "text": "fedacaw", "isCorrect": false }
-         ],
-         "createdAt": 1653056992025
+            { "id": 0, "text": "To make sure that your inline styles are applied correctly.", "isCorrect": false },
+            { "id": 1, "text": "To determine the specificity of CSS rules.", "isCorrect": false },
+            { "id": 2, "text": "To make sure that all links are styled correctly on the page", "isCorrect": false },
+            {
+               "id": 3,
+               "text": "To link a specific stylesheet file to an HTML file so that the styles get applied on the page",
+               "isCorrect": true
+            }
+         ]
       },
       {
          "id": 20,
-         "categories": ["JavaScript", "feafcdzsxd"],
-         "type": "multiple-choice",
-         "title": "vsdzvs",
-         "answers": ["dvddd", "ssss", "vdddd", "dddd"],
-         "correctAnswers": ["dvddd", "ssss"],
-         "createdAt": 1653057260252
+         "categories": ["css", "Typography"],
+         "type": "single-choice",
+         "title": "Why is it important to include web-safe, fallback fonts?",
+         "answers": [
+            { "id": 0, "text": "Three fonts must be provided to font-family.", "isCorrect": false },
+            {
+               "id": 1,
+               "text": "In the case that your custom fonts don't render, web-safe fonts provide a secondary option.",
+               "isCorrect": true
+            },
+            { "id": 2, "text": "Using web-safe fonts will overwrite any custom fonts.", "isCorrect": false },
+            { "id": 3, "text": "It's not important to include web-safe, fallback fonts.", "isCorrect": false }
+         ]
       },
       {
          "id": 21,
-         "categories": ["JavaScript", "aaaaa"],
-         "type": "multiple-choice",
-         "title": "dddddd",
-         "answers": [],
-         "correctAnswers": [],
-         "createdAt": 1653057537557
+         "categories": ["html", "Introduction"],
+         "type": "single-choice",
+         "title": "What does HTML stand for?",
+         "answers": [
+            { "id": 0, "text": "Home Tool Markup Language", "isCorrect": false },
+            { "id": 1, "text": "Hyperlinks and Text Markup Language", "isCorrect": false },
+            { "id": 2, "text": "Hyper Text Markup Language", "isCorrect": true },
+            { "id": 3, "text": "HyperTool for Markup Language", "isCorrect": false }
+         ]
       },
       {
          "id": 22,
-         "categories": ["JavaScript", "aaaaabvsfdsv"],
+         "categories": ["html", "Introduction"],
          "type": "multiple-choice",
-         "title": "ddddddvdsv ",
-         "answers": ["dddddddv", "cccds sfb s", "ssfscssfrbvd", "scscbsd"],
-         "correctAnswers": ["dddddddv", "cccds sfb s"],
-         "createdAt": 1653057620836
+         "title": "What HTML code will display as italics?",
+         "answers": ["<em>Hello</em>", "<b>Hello</b>", "<strong>Hello</strong>", "<i>Hello</i>"],
+         "correctAnswers": ["<em>Hello</em>", "<i>Hello</i>"]
       },
       {
          "id": 23,
-         "categories": ["JavaScript", "utfyyr"],
-         "type": "multiple-choice",
-         "title": "ttttttttttt",
-         "answers": ["dddyyyyyyyyy", "rrrrrrrrrrr", "yyyyyyyyyyy", "rrrrrrrrrrrrr"],
-         "correctAnswers": ["dddyyyyyyyyy", "rrrrrrrrrrr"],
-         "createdAt": 1653057770340
+         "categories": ["html", "Introduction"],
+         "type": "single-choice",
+         "title": "Which of the following elements will directly affect the vertical spacing in an HTML layout?",
+         "answers": [
+            { "id": 0, "text": "<break />", "isCorrect": false },
+            { "id": 1, "text": "<b>", "isCorrect": false },
+            { "id": 2, "text": "<br>", "isCorrect": true },
+            { "id": 3, "text": "<break>", "isCorrect": false }
+         ]
       },
       {
          "id": 24,
-         "categories": ["JavaScript", "dddddddddd"],
-         "type": "multiple-choice",
-         "title": "fffffffffffffff",
-         "answers": [],
-         "correctAnswers": [],
-         "createdAt": 1653057957952
+         "categories": ["html", "Tables"],
+         "type": "single-choice",
+         "title": "Which of the following tags is used to enclose the row of a table containing its headers?",
+         "answers": [
+            { "id": 0, "text": "<th></th>", "isCorrect": false },
+            { "id": 1, "text": "<thead></thead>", "isCorrect": true },
+            { "id": 2, "text": "<tr></tr>", "isCorrect": false },
+            { "id": 3, "text": "<tbody></tbody>", "isCorrect": false }
+         ]
       },
       {
          "id": 25,
-         "categories": ["JavaScript", "dddddddddd"],
-         "type": "multiple-choice",
-         "title": "ffffffddafabv",
-         "answers": [],
-         "correctAnswers": [],
-         "createdAt": 1653057987992
+         "categories": ["html", "Tables"],
+         "type": "true-or-false",
+         "title": "The tags used to separate the body of the table from its headers and footers is <tbody></tbody>.",
+         "answers": [
+            { "id": 0, "text": "True.", "isCorrect": true },
+            { "id": 1, "text": "False.", "isCorrect": false }
+         ]
       },
       {
          "id": 26,
-         "categories": ["JavaScript", "fdrfdfbs"],
-         "type": "multiple-choice",
-         "title": "egsdvgrg",
-         "answers": ["egrsdffgr", "rvfserb", "bgfsbgerw", "wgrgrw"],
-         "correctAnswers": ["bgfsbgerw", "wgrgrw"],
-         "createdAt": 1653058263910
+         "categories": ["html", "Tables"],
+         "type": "single-choice",
+         "title": "Which tag adds a new row header to an HTML table?",
+         "answers": [
+            { "id": 0, "text": "<th scope=”row”></th>", "isCorrect": true },
+            { "id": 1, "text": "<th></th>", "isCorrect": false },
+            { "id": 2, "text": "<tr></tr>", "isCorrect": false },
+            { "id": 3, "text": "<th scope=”col”></th>", "isCorrect": false }
+         ]
       },
       {
          "id": 27,
-         "categories": ["JavaScript", "fdrfdfbsvzxvz"],
-         "type": "multiple-choice",
-         "title": "egsdvgrgvzsvvb",
-         "answers": ["egrsdffgrdfbs", "rvfserbddvzdv", "bgfsbgerwsvdv", "wgrgrwdzvde"],
-         "correctAnswers": ["egrsdffgrdfbs", "rvfserbddvzdv"],
-         "createdAt": 1653058353817
+         "categories": ["html", "Tables"],
+         "type": "single-choice",
+         "title": "Choose one tag used to surround an antire table of data",
+         "answers": [
+            { "id": 0, "text": "<table></table>", "isCorrect": true },
+            { "id": 1, "text": "<thead></thead>", "isCorrect": false },
+            { "id": 2, "text": "<td></td>", "isCorrect": false },
+            { "id": 3, "text": "<tr></tr>", "isCorrect": false }
+         ]
       },
       {
          "id": 28,
-         "categories": ["JavaScript", "fdrfdfbsvzxvz"],
-         "type": "multiple-choice",
-         "title": "egsdvgrgvzsvvb",
-         "answers": ["egrsdffgrdfbs", "rvfserbddvzdv", "bgfsbgerwsvdv", "wgrgrwdzvde"],
-         "correctAnswers": ["egrsdffgrdfbs", "rvfserbddvzdv"],
-         "createdAt": 1653058464394
+         "categories": ["html", "Tables"],
+         "type": "true-or-false",
+         "title": "The tag used to separate the footer of the tablem from its body is <tbody></tbody>.",
+         "answers": [
+            { "id": 0, "text": "True.", "isCorrect": false },
+            { "id": 1, "text": "False.", "isCorrect": true }
+         ]
       },
       {
          "id": 29,
-         "categories": ["JavaScript", "fdrfdfbsvzxvz"],
-         "type": "multiple-choice",
-         "title": "egsdvgrgvzsvvb",
-         "answers": ["egrsdffgrdfbs", "rvfserbddvzdv", "bgfsbgerwsvdv", ""],
-         "correctAnswers": ["egrsdffgrdfbs", "rvfserbddvzdv"],
-         "createdAt": 1653058470914
+         "categories": ["html", "Forms"],
+         "type": "single-choice",
+         "title": "What attribute should you add to a <input> element if you want to ensure that users provide a response?",
+         "answers": [
+            { "id": 0, "text": "pattern", "isCorrect": false },
+            { "id": 1, "text": "maxlength", "isCorrect": false },
+            { "id": 2, "text": "min", "isCorrect": false },
+            { "id": 3, "text": "required", "isCorrect": true }
+         ]
       },
       {
          "id": 30,
-         "categories": ["JavaScript", "fdrfdfbsvzxvz"],
+         "categories": ["html", "Forms"],
+         "type": "true-or-false",
+         "title": "By implementing client-side validation, it saves us time from having to send information to the server and wait for the server to respond.",
+         "answers": [
+            { "id": 0, "text": "True.", "isCorrect": true },
+            { "id": 1, "text": "False.", "isCorrect": false }
+         ]
+      },
+      {
+         "id": 31,
+         "categories": ["html", "Forms"],
+         "type": "single-choice",
+         "title": "What is a benefit of using the <label> element?",
+         "answers": [
+            {
+               "id": 0,
+               "text": "Clicking on the <label> element clears the value of the <input> element.",
+               "isCorrect": false
+            },
+            {
+               "id": 1,
+               "text": "The <label> element will autofill the field of the associated <input> element.",
+               "isCorrect": false
+            },
+            { "id": 2, "text": "The <label> element validates the value of the <input> element.", "isCorrect": false },
+            {
+               "id": 3,
+               "text": "Clicking on the <label> element will focus on the text field of the associated <input> element.",
+               "isCorrect": true
+            }
+         ]
+      },
+      {
+         "id": 32,
+         "categories": ["html", "Forms"],
+         "type": "true-or-false",
+         "title": "You can assign default text to a <textarea> element by adding text between the opening and closing <textarea> tags.",
+         "answers": [
+            { "id": 0, "text": "True.", "isCorrect": true },
+            { "id": 1, "text": "False.", "isCorrect": false }
+         ]
+      },
+      {
+         "id": 33,
+         "categories": ["html", "Forms"],
+         "type": "single-choice",
+         "title": "How are radio buttons different from check boxes?",
+         "answers": [
+            { "id": 0, "text": "Checkboxes can have labels but radio buttons cannot.", "isCorrect": false },
+            {
+               "id": 1,
+               "text": "Radio buttons cannot be inserter into a form, but checkboxes can.",
+               "isCorrect": false
+            },
+            { "id": 2, "text": "You can select multiple checkboxes but only one radio button.", "isCorrect": true },
+            { "id": 3, "text": "There is no difference, both are used interchangeably.", "isCorrect": false }
+         ]
+      },
+      {
+         "id": 34,
+         "categories": ["html", "Semantic"],
+         "type": "single-choice",
+         "title": "Why is the <div> tag not semantic?",
+         "answers": [
+            { "id": 0, "text": "It provides context as to what content is inside of the tag.", "isCorrect": false },
+            {
+               "id": 1,
+               "text": "It provides no context as to what the content is inside of the tag.",
+               "isCorrect": true
+            },
+            { "id": 2, "text": "It requires a closing tag.", "isCorrect": false },
+            { "id": 3, "text": "It can be used multiple times throughout the code.", "isCorrect": false }
+         ]
+      },
+      {
+         "id": 35,
+         "categories": ["html", "Semantic"],
+         "type": "single-choice",
+         "title": "What's the difference between <embed> and <video>?",
+         "answers": [
+            { "id": 0, "text": "<embed> does not support video while <video> does.", "isCorrect": false },
+            {
+               "id": 1,
+               "text": "<embed> is used in the header of the document while <video> can be used anywhere.",
+               "isCorrect": false
+            },
+            { "id": 2, "text": "<video>  is a semantic element while <embed> is not.", "isCorrect": false },
+            {
+               "id": 3,
+               "text": "<video> can only be used for video, while <embed> can be used for any type of media.",
+               "isCorrect": true
+            }
+         ]
+      },
+      {
+         "id": 36,
+         "categories": ["html", "Semantic"],
+         "type": "single-choice",
+         "title": "Which one of the tags you must choose for the very start of the page? ",
+         "answers": [
+            { "id": 0, "text": "<h1>", "isCorrect": true },
+            { "id": 1, "text": "<h2>", "isCorrect": false },
+            { "id": 2, "text": "<h4>", "isCorrect": false },
+            { "id": 3, "text": "<h6>", "isCorrect": false }
+         ]
+      },
+      {
+         "id": 37,
+         "categories": ["html", "Semantic"],
+         "type": "single-choice",
+         "title": "What choice correctly creates a webpage hyperlink?",
+         "answers": [
+            { "id": 0, "text": "<a src=”mindswap.com”>link</a>", "isCorrect": false },
+            { "id": 1, "text": "<href=”mindswap.com”>link</a>", "isCorrect": true },
+            { "id": 2, "text": "<a href=”mindswap.com”>link</a>", "isCorrect": false },
+            { "id": 3, "text": "<src=”mindswap.com”>link</a>", "isCorrect": false }
+         ]
+      },
+      {
+         "id": 38,
+         "categories": ["JavaScript", "Introduction"],
+         "type": "single-choice",
+         "title": "Match the blanks with the proper syntax to create an HTML paragraph element from this text.",
+         "answers": [
+            { "id": 0, "text": "console.log()", "isCorrect": false },
+            { "id": 1, "text": "// Is this a comment?", "isCorrect": true },
+            { "id": 2, "text": "'Is this a comment?'", "isCorrect": false },
+            { "id": 3, "text": "/* Comment Line */", "isCorrect": false }
+         ]
+      },
+      {
+         "id": 39,
+         "categories": ["JavaScript", "Introduction"],
+         "type": "single-choice",
+         "title": "What is the correct way to call the random method on the Math global object?",
+         "answers": [
+            { "id": 0, "text": "Math(random);", "isCorrect": false },
+            { "id": 1, "text": "math.random();", "isCorrect": false },
+            { "id": 2, "text": "Math.random();", "isCorrect": true },
+            { "id": 3, "text": "random.Math();", "isCorrect": false }
+         ]
+      },
+      {
+         "id": 40,
+         "categories": ["JavaScript", "Introduction"],
+         "type": "single-choice",
+         "title": "How do you declare a new variable that you can not change?",
+         "answers": [
+            { "id": 0, "text": "const myName = “John Doe”", "isCorrect": true },
+            { "id": 1, "text": "let myName = “John Doe”", "isCorrect": false },
+            { "id": 2, "text": "var myName : “John Doe”", "isCorrect": false },
+            { "id": 3, "text": "none of the aboves", "isCorrect": false }
+         ]
+      },
+      {
+         "id": 41,
+         "categories": ["JavaScript", "Introduction"],
+         "type": "true-or-false",
+         "title": "Are variables used in JavaScript for storing or hold data?",
+         "answers": [
+            { "id": 0, "text": "True.", "isCorrect": true },
+            { "id": 1, "text": "False", "isCorrect": false }
+         ]
+      },
+      {
+         "id": 42,
+         "categories": ["JavaScript", "Introduction"],
+         "type": "single-choice",
+         "title": "What is a string concatenation?",
+         "answers": [
+            { "id": 0, "text": "When you change a variable's value.", "isCorrect": false },
+            { "id": 1, "text": "When you join strings together.", "isCorrect": true },
+            { "id": 2, "text": "When you print a string to the console.", "isCorrect": false },
+            { "id": 3, "text": "When you assign  a string to a variable.", "isCorrect": false }
+         ]
+      },
+      {
+         "id": 43,
+         "categories": ["JavaScript", "Functions"],
+         "type": "single-choice",
+         "title": "How do you create a function in JavaScript?",
+         "answers": [
+            { "id": 0, "text": "function myFunction()", "isCorrect": true },
+            { "id": 1, "text": "function:myFunction()", "isCorrect": false },
+            { "id": 2, "text": "function MyFunction()", "isCorrect": false },
+            { "id": 3, "text": "function = myFunction()", "isCorrect": false }
+         ]
+      },
+      {
+         "id": 44,
+         "categories": ["JavaScript", "Functions"],
+         "type": "single-choice",
+         "title": "What's the purpose of a parameter?",
+         "answers": [
+            { "id": 0, "text": "To call a function.", "isCorrect": false },
+            { "id": 1, "text": "To specify actual values passed to a function.", "isCorrect": true },
+            { "id": 2, "text": "To  allow a function to accept data.", "isCorrect": false }
+         ]
+      },
+      {
+         "id": 45,
+         "categories": ["JavaScript", "Functions"],
+         "type": "true-or-false",
+         "title": "A function in JavaScript is used to create new variables?",
+         "answers": [
+            { "id": 0, "text": "True.", "isCorrect": false },
+            { "id": 1, "text": "False", "isCorrect": true }
+         ]
+      },
+      {
+         "id": 46,
+         "categories": ["JavaScript", "Functions"],
+         "type": "single-choice",
+         "title": "How many ways exist to write a function in Javascript:",
+         "answers": [
+            { "id": 0, "text": "1", "isCorrect": false },
+            { "id": 1, "text": "2", "isCorrect": false },
+            { "id": 2, "text": "3", "isCorrect": true },
+            { "id": 3, "text": "4", "isCorrect": false }
+         ]
+      },
+      {
+         "id": 47,
+         "categories": ["JavaScript", "Functions"],
+         "type": "true-or-false",
+         "title": "Do all JavaScript functions need a return?",
+         "answers": [
+            { "id": 0, "text": "Yes.", "isCorrect": false },
+            { "id": 1, "text": "No.", "isCorrect": true }
+         ]
+      },
+      {
+         "id": 48,
+         "categories": ["JavaScript", "Arrays"],
+         "type": "single-choice",
+         "title": "What is the purpose of an array?",
+         "answers": [
+            { "id": 0, "text": "To store data only of the same type.", "isCorrect": false },
+            { "id": 1, "text": "To organize data into key-value pairs.", "isCorrect": false },
+            { "id": 2, "text": "To store data in an organized fashion.", "isCorrect": true },
+            { "id": 3, "text": "To organize data at lettered positions.", "isCorrect": false }
+         ]
+      },
+      {
+         "id": 49,
+         "categories": ["JavaScript", "Arrays"],
+         "type": "single-choice",
+         "title": "How can you find how many elements are within an array?",
+         "answers": [
+            { "id": 0, "text": "myArray.length", "isCorrect": true },
+            { "id": 1, "text": "length(myArray)", "isCorrect": false },
+            { "id": 2, "text": "myArray.findLength", "isCorrect": false }
+         ]
+      },
+      {
+         "id": 50,
+         "categories": ["JavaScript", "Arrays"],
          "type": "multiple-choice",
-         "title": "egsdvgrgvzsvvb",
-         "answers": ["egrsdffgrdfbs", "rvfserbddvzdv", "bgfsbgerwsvdv", ""],
-         "correctAnswers": ["egrsdffgrdfbs", "rvfserbddvzdv"],
-         "createdAt": 1653058492386
+         "title": "Wich of the method(s) below does change the array it is called on?",
+         "answers": [".pop()", ".push()", ".slice()", ".map()"],
+         "correctAnswers": [".pop()", ".push()"]
+      },
+      {
+         "id": 51,
+         "categories": ["JavaScript", "Arrays"],
+         "type": "single-choice",
+         "title": "What is the correct syntax for an array?",
+         "answers": [
+            { "id": 0, "text": "let myArray = [“Coding” ; ”is a lot” ; ”of fun”];", "isCorrect": false },
+            { "id": 1, "text": "let myArray = { “Coding” , ”is a lot” , ”of fun”};", "isCorrect": false },
+            { "id": 2, "text": "let myArray = “Coding” ; ”is a lot” ; ”of fun”;", "isCorrect": false },
+            { "id": 3, "text": "let myArray = [“Coding” , ”is a lot” , ”of fun”];", "isCorrect": true }
+         ]
+      },
+      {
+         "id": 52,
+         "categories": ["JavaScript", "Objects"],
+         "type": "single-choice",
+         "title": "What is a factory function?",
+         "answers": [
+            { "id": 0, "text": "A function that returns an array of objects.", "isCorrect": false },
+            {
+               "id": 1,
+               "text": "A function that takes an object as an argument  and then modifies it.",
+               "isCorrect": false
+            },
+            { "id": 2, "text": "A function that returns an object.", "isCorrect": true }
+         ]
+      },
+      {
+         "id": 53,
+         "categories": ["JavaScript", "Objects"],
+         "type": "true-or-false",
+         "title": "A method is a property with a function as its value.",
+         "answers": [
+            { "id": 0, "text": "True.", "isCorrect": true },
+            { "id": 1, "text": "False", "isCorrect": false }
+         ]
+      },
+      {
+         "id": 54,
+         "categories": ["JavaScript", "Objects"],
+         "type": "single-choice",
+         "title": "Which of the following Object methods can be used to copy all of the properties of an object into a new object?",
+         "answers": [
+            { "id": 0, "text": "Object.assign()", "isCorrect": true },
+            { "id": 1, "text": "Object.entries()", "isCorrect": false },
+            { "id": 2, "text": "Object.keys()", "isCorrect": false },
+            { "id": 3, "text": "myObject.hasOwnProperty()", "isCorrect": false }
+         ]
+      },
+      {
+         "id": 55,
+         "categories": ["JavaScript", "Objects"],
+         "type": "multiple-choice",
+         "title": "Which one of the tags you must choose for the very start of the page? ",
+         "answers": [
+            "Objects only store strings.",
+            "Objects store data in numbered positions.",
+            "Objects can't store other objects.",
+            "Objects store unordered data of any type as key-value pairs."
+         ],
+         "correctAnswers": [
+            "Objects only store strings.",
+            "Objects store data in numbered positions.",
+            "Objects can't store other objects."
+         ]
+      },
+      {
+         "id": 56,
+         "categories": ["React", "JSX"],
+         "type": "single-choice",
+         "title": "Can a web browser read JSX directly?",
+         "answers": [
+            { "id": 0, "text": "No, JSX must be compiled before it can be read by a web browser.", "isCorrect": false },
+            { "id": 1, "text": "Only Internet Explorer.", "isCorrect": true },
+            { "id": 2, "text": "No, a web browser must be compiled before it can read JSX.", "isCorrect": false },
+            { "id": 3, "text": "Yes.", "isCorrect": false }
+         ]
+      },
+      {
+         "id": 57,
+         "categories": ["React", "JSX"],
+         "type": "single-choice",
+         "title": "What should you pass to ReactDOM.render() for its first argument?",
+         "answers": [
+            { "id": 0, "text": "A selector that matches an HTML element.", "isCorrect": false },
+            { "id": 1, "text": "ReactDOM.render() itself.", "isCorrect": false },
+            { "id": 2, "text": "A JavaScript expression that you want to compile. ", "isCorrect": false },
+            { "id": 3, "text": "A JSX expression that you want to render.", "isCorrect": true }
+         ]
+      },
+      {
+         "id": 58,
+         "categories": ["React", "JSX"],
+         "type": "single-choice",
+         "title": "What problem does the virtual DOM attempt to solve?",
+         "answers": [
+            { "id": 0, "text": "Updating the DOM is not time efficient.", "isCorrect": true },
+            {
+               "id": 1,
+               "text": "The regular DOM cannot recognize when an object has been updated.",
+               "isCorrect": false
+            },
+            { "id": 2, "text": "Updating the DOM will result in only partially rendered objects.", "isCorrect": false },
+            { "id": 3, "text": "Updating DOM objects doesn’t happen when it is supposed to.", "isCorrect": false }
+         ]
+      },
+      {
+         "id": 59,
+         "categories": ["React", "JSX"],
+         "type": "single-choice",
+         "title": "What should you pass to ReactDOM.render() for its second argument?",
+         "answers": [
+            { "id": 0, "text": "A JSX expression  that you want to render.", "isCorrect": false },
+            { "id": 1, "text": "A JSX expression that you want to compile.", "isCorrect": false },
+            { "id": 2, "text": "A selector that matches an HTML element.", "isCorrect": true },
+            { "id": 3, "text": "ReactDOM.render() itself.", "isCorrect": false }
+         ]
+      },
+      {
+         "id": 60,
+         "categories": ["React", "JSX"],
+         "type": "single-choice",
+         "title": "What's a difference between a DOM object and a virtual DOM object?",
+         "answers": [
+            { "id": 0, "text": "A virtual DOM object can't directly affect HTML.", "isCorrect": false },
+            {
+               "id": 1,
+               "text": "A virtual DOM object can update much faster that a regular DOM object.",
+               "isCorrect": false
+            },
+            { "id": 2, "text": "A virtual DOM object will be updated if ANY JSX element renders.", "isCorrect": false },
+            { "id": 3, "text": "All presented answers are correct.", "isCorrect": true }
+         ]
+      },
+      {
+         "id": 61,
+         "categories": ["React", "React Components"],
+         "type": "single-choice",
+         "title": "Which line of code is used to create a component class?",
+         "answers": [
+            { "id": 0, "text": "class MyComponentClass extends React.Component {}", "isCorrect": true },
+            { "id": 1, "text": "Class MyComponentClass extends React.Component {}", "isCorrect": false },
+            { "id": 2, "text": "ReactDOM.render()", "isCorrect": false },
+            { "id": 3, "text": "React.createElement()", "isCorrect": false }
+         ]
+      },
+      {
+         "id": 62,
+         "categories": ["React", "React Components"],
+         "type": "single-choice",
+         "title": "How do you render a component instance?",
+         "answers": [
+            { "id": 0, "text": "<MyComponentClass />.render();", "isCorrect": false },
+            { "id": 1, "text": "ReactDOM.render(<MyComponentClass />);", "isCorrect": false },
+            {
+               "id": 2,
+               "text": "ReactDOM.render(<MyComponentClass />, document.getElementById('app'));",
+               "isCorrect": true
+            },
+            { "id": 3, "text": "You can't render a component instance.", "isCorrect": false }
+         ]
+      },
+      {
+         "id": 63,
+         "categories": ["React", "React Components"],
+         "type": "single-choice",
+         "title": "Which is a valid component instance?",
+         "answers": [
+            { "id": 0, "text": "{MyComponentClass}", "isCorrect": false },
+            { "id": 1, "text": "<MyComponentClass />", "isCorrect": true },
+            { "id": 2, "text": "<h1>MyComponentClass<h1>", "isCorrect": false },
+            { "id": 3, "text": "<h1>{MyComponentClass}<h1>", "isCorrect": false }
+         ]
+      },
+      {
+         "id": 64,
+         "categories": ["React", "React Components"],
+         "type": "single-choice",
+         "title": "Which statement best describes a component class?",
+         "answers": [
+            { "id": 0, "text": "A React component that divides into other React components.", "isCorrect": false },
+            {
+               "id": 1,
+               "text": "An artisan who painstakingly crafts React components, each one being unique.",
+               "isCorrect": false
+            },
+            {
+               "id": 2,
+               "text": "A category within the socioeconomic heirarchy of React components.",
+               "isCorrect": false
+            },
+            {
+               "id": 3,
+               "text": "A factory that mass-produces React components according to a blueprint.",
+               "isCorrect": true
+            }
+         ]
+      },
+      {
+         "id": 65,
+         "categories": ["React", "React Components"],
+         "type": "multiple-choice",
+         "title": "Which of the following statements are true?",
+         "answers": [
+            "React is a JavaScript library.",
+            "The React library contains methods that are meant for interacting with the DOM.",
+            "To import React, use the code import React from 'react'.",
+            "You can't use JSX until you've imported React."
+         ],
+         "correctAnswers": [
+            "React is a JavaScript library.",
+            "To import React, use the code import React from 'react'.",
+            "You can't use JSX until you've imported React."
+         ]
+      },
+      {
+         "id": 66,
+         "categories": ["React", "Components Interacting"],
+         "type": "single-choice",
+         "title": "Why can't you call this.setState from within the render method?",
+         "answers": [
+            {
+               "id": 0,
+               "text": "this.setState automatically calls render, so it would create an infinite loop.",
+               "isCorrect": true
+            },
+            { "id": 1, "text": "You can call this.setState from within the render method.", "isCorrect": false },
+            { "id": 2, "text": "Calling this.setState from render would override all props.", "isCorrect": false },
+            { "id": 3, "text": "By the time a component renders, its state has already been set.", "isCorrect": false }
+         ]
+      },
+      {
+         "id": 67,
+         "categories": ["React", "Components Interacting"],
+         "type": "single-choice",
+         "title": "Which is the correct way to pass a prop?",
+         "answers": [
+            { "id": 0, "text": "<Headline text=”Hello world” />", "isCorrect": true },
+            { "id": 1, "text": "<Headline “text”={this.props.text} />", "isCorrect": false },
+            { "id": 2, "text": "<Headline>.prop.text = “Hello world”", "isCorrect": false }
+         ]
+      },
+      {
+         "id": 68,
+         "categories": ["React", "Components Interacting"],
+         "type": "single-choice",
+         "title": "What does this.props.children return?",
+         "answers": [
+            { "id": 0, "text": "Everything between a component's opening and closing tags.", "isCorrect": true },
+            {
+               "id": 1,
+               "text": "Everything that gets passed a prop in a component's render method.",
+               "isCorrect": false
+            },
+            {
+               "id": 2,
+               "text": "Everything that gets passed a prop in a between a component's opening and closing tags.",
+               "isCorrect": false
+            },
+            { "id": 3, "text": "Every method defined in a component class.", "isCorrect": false }
+         ]
+      },
+      {
+         "id": 69,
+         "categories": ["React", "Components Interacting"],
+         "type": "single-choice",
+         "title": "this.props evaluates to what data type?",
+         "answers": [
+            { "id": 0, "text": "Number", "isCorrect": false },
+            { "id": 1, "text": "Object", "isCorrect": true },
+            { "id": 2, "text": "Array", "isCorrect": false },
+            { "id": 3, "text": "Function", "isCorrect": false }
+         ]
+      },
+      {
+         "id": 70,
+         "categories": ["React", "Components Interacting"],
+         "type": "single-choice",
+         "title": "How many ways we can communicate between components in React?",
+         "answers": [
+            { "id": 0, "text": "Parent to Child communication", "isCorrect": false },
+            { "id": 1, "text": "Child to Parent communication", "isCorrect": false },
+            {
+               "id": 2,
+               "text": "Not-related components (any component to any component) communication.",
+               "isCorrect": false
+            },
+            { "id": 3, "text": "All above.", "isCorrect": true }
+         ]
+      },
+      {
+         "id": 71,
+         "categories": ["React", "Hooks"],
+         "type": "single-choice",
+         "title": "Which of the import statements allow a function component to use the State and Effect Hooks to generate dynamic JSX?",
+         "answers": [
+            { "id": 0, "text": "import  React, { useEffect, useState } from 'react'.", "isCorrect": true },
+            { "id": 1, "text": "import  { useState, useEffect  } from 'react'.", "isCorrect": false },
+            { "id": 2, "text": "import  React, useState, useEffect from 'react'.", "isCorrect": false },
+            { "id": 3, "text": "import React { useState useEffect } from 'react'.", "isCorrect": false }
+         ]
+      },
+      {
+         "id": 72,
+         "categories": ["React", "Hooks"],
+         "type": "single-choice",
+         "title": "What is the second argument passed to useEffect() used for?",
+         "answers": [
+            { "id": 0, "text": "To configure when React calls our effect.", "isCorrect": true },
+            { "id": 1, "text": "To clean up after the event.", "isCorrect": false },
+            { "id": 2, "text": "To pass props to our effect.", "isCorrect": false },
+            { "id": 3, "text": "To bind our effect to the current scope.", "isCorrect": false }
+         ]
+      },
+      {
+         "id": 73,
+         "categories": ["React", "Hooks"],
+         "type": "single-choice",
+         "title": "What type(s) of React Component definitions can we use Hooks with?",
+         "answers": [
+            { "id": 0, "text": "Function and class components.", "isCorrect": true },
+            { "id": 1, "text": "Class components.", "isCorrect": false },
+            { "id": 2, "text": "Hooks components.", "isCorrect": false },
+            { "id": 3, "text": "Function components.", "isCorrect": false }
+         ]
+      },
+      {
+         "id": 4,
+         "categories": ["React", "Hooks"],
+         "type": "single-choice",
+         "title": "Which of the following dependency arrays would cause an effect to be called only after the first render?",
+         "answers": [
+            { "id": 0, "text": "useEffect(effectCallback, null);", "isCorrect": false },
+            { "id": 1, "text": "useEffect(effectCallback, undefined);", "isCorrect": false },
+            { "id": 2, "text": "useEffect(effectCallback, []);", "isCorrect": true },
+            { "id": 3, "text": "useEffect(effectCallback, [ state, props ]);", "isCorrect": false }
+         ]
+      },
+      {
+         "id": 74,
+         "categories": ["React", "Hooks"],
+         "type": "single-choice",
+         "title": "Which of the following are optional when using the Effect Hook?",
+         "answers": [
+            { "id": 0, "text": "Effect function, dependency array, and cleanup function.", "isCorrect": false },
+            { "id": 1, "text": "Effect function and dependency function", "isCorrect": false },
+            { "id": 2, "text": "Cleanup array and dependency function", "isCorrect": false },
+            { "id": 3, "text": "Cleanup function and dependecy array", "isCorrect": true }
+         ]
+      },
+      {
+         "id": 75,
+         "categories": ["JavaScript", "22222222"],
+         "type": "multiple-choice",
+         "title": "44243244",
+         "answers": ["1r3qed", "frvd", "efwasdfgh", "aszdfcghj"],
+         "correctAnswers": ["frvd", "efwasdfgh"],
+         "createdAt": 1653217105646
       }
    ]
 }

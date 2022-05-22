@@ -1,4 +1,3 @@
-import Head from "next/head";
 import AddQuestionsFormSingle from "../components/AddQuestionsFormSingle/AddQuestionsFormSingle";
 
 function addQuestionSingle() {

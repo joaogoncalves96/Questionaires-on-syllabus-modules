@@ -1,7 +1,7 @@
 import { FormEvent, useRef } from "react";
+import styles from "./AddQuestionsFormTrueOrFalse.module.css";
 
 function AddQuestionsFormTrueOrFalse() {
-   //  const { onSubmit } = props;
    const categoriesareaRef = useRef(null);
    const secundaryareaRef = useRef(null);
    const typeareaRef = useRef(null);
@@ -12,6 +12,7 @@ function AddQuestionsFormTrueOrFalse() {
    const trueorFalseareaRef1 = useRef(null);
    async function handleSubmit(e) {
       e.preventDefault();
+      alert("Question added ➕");
       const response = await fetch(`http://localhost:3000/api/questions`, {
          method: "POST",
          headers: {
@@ -41,12 +42,13 @@ function AddQuestionsFormTrueOrFalse() {
       //   }
    }
    return (
-      <form onSubmit={handleSubmit}>
-         <label>
+      <form onSubmit={handleSubmit} className={styles.container}>
+         <h1 className={styles.questionTitle}>True or False Question</h1>
+         <label className={styles.categories}>
             Categories
             {
-               <select ref={categoriesareaRef} name="category">
-                  <option selected value="JavaScript">
+               <select ref={categoriesareaRef} name="category" required>
+                  <option defaultValue value="JavaScript">
                      JavaScript
                   </option>
                   <option value="React">React</option>
@@ -55,41 +57,41 @@ function AddQuestionsFormTrueOrFalse() {
                </select>
             }
             {/* <textarea ref={categoriesareaRef} name="categoriesTitle" /> */}
-            <textarea ref={secundaryareaRef} name="secundaryTitle" />
+            <textarea ref={secundaryareaRef} name="secundaryTitle" placeholder="sub-category" required />
          </label>
-         <label>
+         <label className={styles.type}>
             Type
             <select ref={typeareaRef} name="type">
-               <option selected value="true-or-false">
-                  true-or-false
+               <option defaultValue value="true-or-false">
+                  True-or-False
                </option>
             </select>
          </label>
-         <label>
-            question
+         <label className={styles.question}>
+            Question:
             <textarea ref={questionareaRef} name="title" />
          </label>
-         <label>
-            answer
-            <textarea ref={answerareaRef} name="answers" />
+         <div className={styles.answers}>
+            <textarea ref={answerareaRef} name="answers" placeholder="Answer" required />
             <select ref={trueorFalseareaRef} name="isCorrect">
-               <option value="true">true</option>
-               <option selected value="false">
-                  false
+               <option value="true">True</option>
+               <option defaultValue value="false">
+                  False
                </option>
             </select>
-         </label>
-         <label>
-            answers
-            <textarea ref={answerareaRef1} name="answers" />
+
+            <textarea ref={answerareaRef1} name="answers" placeholder="Answer" required />
             <select ref={trueorFalseareaRef1} name="isCorrect">
-               <option value="true">true</option>
-               <option selected value="false">
-                  false
+               <option value="true">True</option>
+               <option defaultValue value="false">
+                  False
                </option>
             </select>
-         </label>
-         <button type="submit">Add question</button>
+         </div>
+
+         <button type="submit" className={styles.addQuestionButton}>
+            Add question
+         </button>
       </form>
    );
 }
